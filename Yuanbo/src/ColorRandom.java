@@ -1,7 +1,7 @@
 import java.util.Random;
 /**
  * color random selection 
- * @author User1
+ * @author rambo
  *
  */
 public class ColorRandom {
