@@ -3,7 +3,13 @@ package com.rambo.common.params;
 import java.util.List;
 
 import com.google.common.collect.Lists;
-
+/**
+ * 
+ * @description   meter constants
+ * @version currentVersion(1.0)  
+ * @author Yuanbo Zhu  
+ * @createtime Aug 11, 2015 10:31:59 PM
+ */
 public class MeterConstants {
 	// meters for spms
 	// public static int[] METER_IDS_OF_SPMS = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
