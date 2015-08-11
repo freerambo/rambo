@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+	default-lazy-init="true">
+
+
+
+	<bean id="jobDetail"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass"
+			value="com.rambo.erian.service.quartz.dynamic.jobs.MyQuartzJobBean" />
+
+		<property name="jobDataAsMap">
+			<map>
+
+				<!-- <entry key="simpleService"> <ref bean="simpleService" /> </entry> -->
+			</map>
+		</property>
+	</bean>
+
+	<bean id="hourjobDetail"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass"
+			value="com.rambo.erian.service.quartz.dynamic.jobs.HourlyQuartzJobBean" />
+	</bean>
+
+	<bean id="dayjobDetail"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass"
+			value="com.rambo.erian.service.quartz.dynamic.jobs.DailyQuartzJobBean" />
+	</bean>
+
+	<bean id="weekjobDetail"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass"
+			value="com.rambo.erian.service.quartz.dynamic.jobs.WeeklyQuartzJobBean" />
+	</bean>
+
+	<bean id="monthjobDetail"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass"
+			value="com.rambo.erian.service.quartz.dynamic.jobs.MonthlyQuartzJobBean" />
+	</bean>
+
+</beans>

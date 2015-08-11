@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+	default-lazy-init="true">
+
+	<description>Quartz local job with Cron</description>
+
+	<!-- 一个普通的pojo类,用来做定时器的执行类 -->
+	<bean id="sysJobCommon"
+		class="com.rambo.erian.service.quartz.SystemJobCommon"></bean>
+
+	<!-- JobDetajil, 基于MethodInvokingJobDetailFactoryBean调用普通Spring Bean -->
+
+	<bean id="myJobCommonDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="sysJobCommon"></property>
+		<property name="targetMethod" value="daily"></property>
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="false"></property>
+	</bean>
+	
+	<bean id="myJobCommonDetailWeek"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="sysJobCommon"></property>
+		<property name="targetMethod" value="weekly"></property>
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="false"></property>
+	</bean>
+	
+	<bean id="myJobCommonDetailMonth"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="sysJobCommon"></property>
+		<property name="targetMethod" value="monthly"></property>
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="false"></property>
+	</bean>
+	
+	
+	<!-- Quartz本地触发器 -->
+<!-- 升级Spring版本到3.1+，将原来的**TriggerBean替换成**TriggerFactoryBean，例如CronTriggerBean 就可以替换成 CronTriggerFactoryBean -->
+	<bean id="myJobCommonTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="myJobCommonDetail"></property>
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<!-- <property name="cronExpression" value="0 0/10 9-17 ? * MON-FRI" /> -->
+		<!-- every five seconds -->
+<!-- 		<property name="cronExpression" value="0 0/40 * * * ?" />
+ -->		
+<!--  <property name="cronExpression" value="0 30 11 * * ? *" />
+ -->	
+	 <property name="cronExpression" value="0 0/30 * * * ? *" />
+		
+	</bean>
+	
+	<bean id="myJobCommonTriggerWeek" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="myJobCommonDetailWeek"></property>
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<!-- <property name="cronExpression" value="0 0/10 9-17 ? * MON-FRI" /> -->
+		<!-- every five seconds -->
+		<property name="cronExpression" value="0 40 01 ? * MON" />
+	</bean>
+	
+		<bean id="myJobCommonTriggerMonth" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="myJobCommonDetailMonth"></property>
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<!-- <property name="cronExpression" value="0 0/10 9-17 ? * MON-FRI" /> -->
+		<!-- every five seconds -->
+		<property name="cronExpression" value="0 30 03 1 * ?" />
+	</bean>
+
+<!-- 
+0 05 0/1 * * ? * 
+Fire at 05min every hour
+
+0 10 02 * * ? * 
+Fire at 02:10am every day
+
+0 30 02 ? * MON	
+Fire at 02:30am every Monday
+
+0 05 02 1 * ?	
+Fire at 02:05am on the 1st day of every month
+-->
+
+
+	<!--  Schduler  of Quartz-->
+	
+	
+	<bean id="schedulerFactory"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<!-- Triggers集成 -->
+		<property name="triggers">
+			<list>
+				<ref bean="myJobCommonTrigger" />
+				<!-- <ref bean="myJobCommonTriggerWeek" />
+				<ref bean="myJobCommonTriggerMonth" /> -->
+			</list>
+		</property>
+		<!-- 启动时延期10秒开始任务 -->
+		<property name="startupDelay" value="5" />
+	</bean>
+	
+	
+	
+	
+
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+	default-lazy-init="true">
+	<!-- <bean name="quartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
+		<property name="applicationContextSchedulerContextKey" value="applicationContextKey" 
+		/> <property name="configLocation" value="classpath:quartz.properties" /> 
+		</bean> -->
+
+	
+	
+	<import resource="jobs.xml"/>
+	
+	
+	<!-- 调度器 -->
+	<bean id="quartzScheduler"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="jobFactory">
+			<bean class="com.rambo.erian.service.quartz.SpringBeanJobFactory" />
+		</property>
+		 <!-- quartz配置文件路径, 指向cluster配置 -->
+		<property name="configLocation" value="classpath:schedule/quartz-cluster.properties" />
+		
+		<!-- 保存Job数据到数据库所需的数据源 -->
+		<property name="dataSource" ref="quartzDataSource" />
+
+		<!-- Triggers集成 -->
+<!-- 		<property name="triggers">
+			<list>
+				<ref bean="weekJobCommonTrigger" />
+			</list>
+		</property> -->
+		<!-- 启动时延期10秒开始任务 -->
+		<property name="startupDelay" value="10" />
+
+	</bean>
+
+
+
+</beans>
