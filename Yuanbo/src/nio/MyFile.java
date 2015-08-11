@@ -63,7 +63,7 @@ public class MyFile<Path> extends SimpleFileVisitor<Path>{
 	public static void showAllFile(){
 		
 		try{
-			Files.walkFileTree(Paths.get("D:", "360Downloads","ºº ıª˝¿€","spring"),new MyFile() );
+			Files.walkFileTree(Paths.get("D:", "tmp"),new MyFile() );
 			
 		}catch(Exception e){
 			e.printStackTrace();
