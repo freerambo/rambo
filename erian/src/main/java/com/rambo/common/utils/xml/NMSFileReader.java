@@ -48,8 +48,8 @@ public class NMSFileReader<Path> extends SimpleFileVisitor<Path> {
 	private static Logger log = LoggerFactory.getLogger(NMSFileReader.class);
 	private static DAOFactory df = DAOFactory.getDAOFactory(DAOFactory.MYSQL);
 	private static NMSRecordDAO dao = df.getNMSRecordDAO();
-	static String startTime = "NMS_STD_20150727";
-	static String latest = "NMS_STD_20150727";
+	static String startTime = "NMS_STD_20150825";
+	static String latest = "NMS_STD_20150825";
 
 	/**
 	 * trigged when visit the file
@@ -209,7 +209,7 @@ public class NMSFileReader<Path> extends SimpleFileVisitor<Path> {
 			try {
 				// D:\erian-works\database\2014\01
 				 Files.walkFileTree(
-				 Paths.get("/home", "/vincent", "/nms", "/test"), reader);
+				 Paths.get("/home", "/vincent", "/test"), reader);
 
 //				Files.walkFileTree(Paths.get("D:", "erian-works", "database",
 //						"2014", "test"), reader);

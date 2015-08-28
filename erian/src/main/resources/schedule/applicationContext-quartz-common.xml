@@ -45,10 +45,10 @@
 		<!-- every five seconds -->
 <!-- 		<property name="cronExpression" value="0 0/40 * * * ?" />
  -->		
-<!--  <property name="cronExpression" value="0 30 11 * * ? *" />
- -->	
-	 <property name="cronExpression" value="0 0/30 * * * ? *" />
-		
+ <property name="cronExpression" value="0 30 11 * * ? *" />
+	
+<!-- 	 <property name="cronExpression" value="0 0/30 * * * ? *" />
+ -->		
 	</bean>
 	
 	<bean id="myJobCommonTriggerWeek" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
