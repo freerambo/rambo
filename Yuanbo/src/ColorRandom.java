@@ -5,7 +5,7 @@ import java.util.Random;
  *
  */
 public class ColorRandom {
-
+//Salvation lies within
 	public static void main(String[] args) {
 		int a[] = new int[3];
 		String[] colors = { "red", "green", "black", "blue", "white" };

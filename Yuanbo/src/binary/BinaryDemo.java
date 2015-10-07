@@ -1,12 +1,11 @@
 package binary;
 
 /**
- * 二进制练习
  * 
- * @description
- * @version currentVersion(1.0)
- * @author Rambo
- * @createtime 2013年12月6日 下午2:39:19
+ * @description  change the binary to integer
+ * @version currentVersion(1.0)  
+ * @author Yuanbo Zhu  
+ * @createtime Aug 28, 2015 5:20:04 PM
  */
 public class BinaryDemo {
 
@@ -16,10 +15,10 @@ public class BinaryDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// 二进制字符串转int
-		int bi = 0b1010;
+		// change the binary to int
+		int bi = 0b1011;
 		System.out.println(bi); // 10
-		System.out.println(Integer.parseInt("1010", 2));
+		System.out.println(Integer.parseInt("1010", 8));
 	}
 
 }
