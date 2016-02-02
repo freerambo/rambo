@@ -1,0 +1,284 @@
+16:40:51.771 [main] ERROR o.s.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.lang.String com.rambo.erian.rest.PmWlgRestController.stop()
+to {[/api/v1/pmWlg/stop],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.lang.String com.rambo.erian.rest.NMSRestController.stop() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:658) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:624) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:672) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:543) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:484) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244) [javax.servlet-api-3.0.1.jar:3.0.1]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:475) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:291) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:730) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:254) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:281) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at com.rambo.erian.QuickStartServer.main(QuickStartServer.java:40) [test-classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.lang.String com.rambo.erian.rest.PmWlgRestController.stop()
+to {[/api/v1/pmWlg/stop],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.lang.String com.rambo.erian.rest.NMSRestController.stop() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:177) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:149) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:109) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:89) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:126) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	... 29 common frames omitted
+16:40:51.785 [main] WARN  /erian - unavailable
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.lang.String com.rambo.erian.rest.PmWlgRestController.stop()
+to {[/api/v1/pmWlg/stop],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.lang.String com.rambo.erian.rest.NMSRestController.stop() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:658) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:624) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:672) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:543) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:484) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244) ~[javax.servlet-api-3.0.1.jar:3.0.1]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:475) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:291) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:730) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:254) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:281) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at com.rambo.erian.QuickStartServer.main(QuickStartServer.java:40) [test-classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.lang.String com.rambo.erian.rest.PmWlgRestController.stop()
+to {[/api/v1/pmWlg/stop],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.lang.String com.rambo.erian.rest.NMSRestController.stop() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:177) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:149) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:109) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:89) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:126) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	... 29 common frames omitted
+16:41:27.110 [main] ERROR o.s.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.lang.String com.rambo.erian.rest.PmWlgRestController.stop()
+to {[/api/v1/pmWlg/stop],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.lang.String com.rambo.erian.rest.NMSRestController.stop() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:658) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:624) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:672) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:543) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:484) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244) [javax.servlet-api-3.0.1.jar:3.0.1]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:475) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:291) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:730) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:254) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.springside.modules.test.jetty.JettyFactory.reloadContext(JettyFactory.java:81) [springside-core-4.2.3-SNAPSHOT-tests.jar:4.2.3-SNAPSHOT]
+	at com.rambo.erian.QuickStartServer.main(QuickStartServer.java:49) [test-classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.lang.String com.rambo.erian.rest.PmWlgRestController.stop()
+to {[/api/v1/pmWlg/stop],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.lang.String com.rambo.erian.rest.NMSRestController.stop() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:177) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:149) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:109) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:89) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:126) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	... 27 common frames omitted
+16:41:27.111 [main] WARN  erian - unavailable
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.lang.String com.rambo.erian.rest.PmWlgRestController.stop()
+to {[/api/v1/pmWlg/stop],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.lang.String com.rambo.erian.rest.NMSRestController.stop() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:658) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:624) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:672) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:543) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:484) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244) ~[javax.servlet-api-3.0.1.jar:3.0.1]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:475) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:291) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:730) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:254) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.springside.modules.test.jetty.JettyFactory.reloadContext(JettyFactory.java:81) [springside-core-4.2.3-SNAPSHOT-tests.jar:4.2.3-SNAPSHOT]
+	at com.rambo.erian.QuickStartServer.main(QuickStartServer.java:49) [test-classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.lang.String com.rambo.erian.rest.PmWlgRestController.stop()
+to {[/api/v1/pmWlg/stop],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.lang.String com.rambo.erian.rest.NMSRestController.stop() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:177) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:149) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:109) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:89) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:126) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	... 27 common frames omitted
+16:42:08.478 [main] ERROR o.s.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.util.List<com.rambo.erian.entity.PmWlgDay> com.rambo.erian.rest.PmWlgRestController.getDaily(java.util.Date,java.util.Date,java.lang.String)
+to {[/api/v1/pmWlg/days],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.util.List<com.rambo.erian.entity.PmWlgHour> com.rambo.erian.rest.NMSRestController.start(java.util.Date,java.lang.String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:658) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:624) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:672) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:543) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:484) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244) [javax.servlet-api-3.0.1.jar:3.0.1]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:475) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:291) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:730) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:254) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:281) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at com.rambo.erian.QuickStartServer.main(QuickStartServer.java:40) [test-classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.util.List<com.rambo.erian.entity.PmWlgDay> com.rambo.erian.rest.PmWlgRestController.getDaily(java.util.Date,java.util.Date,java.lang.String)
+to {[/api/v1/pmWlg/days],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.util.List<com.rambo.erian.entity.PmWlgHour> com.rambo.erian.rest.NMSRestController.start(java.util.Date,java.lang.String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:177) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:149) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:109) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:89) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:126) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	... 29 common frames omitted
+16:42:08.479 [main] WARN  /erian - unavailable
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.util.List<com.rambo.erian.entity.PmWlgDay> com.rambo.erian.rest.PmWlgRestController.getDaily(java.util.Date,java.util.Date,java.lang.String)
+to {[/api/v1/pmWlg/days],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.util.List<com.rambo.erian.entity.PmWlgHour> com.rambo.erian.rest.NMSRestController.start(java.util.Date,java.lang.String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:658) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:624) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:672) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:543) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:484) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244) ~[javax.servlet-api-3.0.1.jar:3.0.1]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:475) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:291) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:730) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:254) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:281) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.14.v20131031.jar:7.6.14.v20131031]
+	at com.rambo.erian.QuickStartServer.main(QuickStartServer.java:40) [test-classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'pmWlgRestController' bean method 
+public java.util.List<com.rambo.erian.entity.PmWlgDay> com.rambo.erian.rest.PmWlgRestController.getDaily(java.util.Date,java.util.Date,java.lang.String)
+to {[/api/v1/pmWlg/days],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}: There is already 'NMSRestController' bean method
+public java.util.List<com.rambo.erian.entity.PmWlgHour> com.rambo.erian.rest.NMSRestController.start(java.util.Date,java.lang.String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:177) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:149) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:109) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:89) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:126) ~[spring-webmvc-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549) ~[spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	... 29 common frames omitted
+17:04:38.131 [qtp1112823384-27] WARN  c.r.erian.rest.PmWlgRestController - Nov 1, 2014 1:00:00 AM
+17:04:58.464 [qtp1112823384-25] WARN  c.r.erian.rest.PmWlgRestController - Nov 1, 2014 1:00:00 AM
+17:12:38.882 [quartzScheduler_Worker-1] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Tue May 26 17:00:00 SGT 2015
+18:12:31.646 [quartzScheduler_Worker-1] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Tue May 26 18:00:00 SGT 2015
+21:12:41.969 [quartzScheduler_Worker-2] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Tue May 26 21:00:00 SGT 2015
+22:12:45.645 [quartzScheduler_Worker-1] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Tue May 26 22:00:00 SGT 2015

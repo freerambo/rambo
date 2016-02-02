@@ -202,7 +202,7 @@ public class DataExportController {
 
 			// get all daily data of SPMS
 
-			List<Object[]> spms = pmWlgDayService.getValuesByStartAndEnd(s, e);
+//			List<Object[]> spms = pmWlgDayService.getValuesByStartAndEnd(s, e);
 			// List<PmWlgDay> pwds = pmWlgDayService.getByPmIdsWithStartAndEnd(
 			// MeterConstants.METER_IDS_OF_SPMS, s, e);
 
@@ -224,7 +224,7 @@ public class DataExportController {
 					}
 
 				}
-				for (Object[] obj : spms) {
+/*				for (Object[] obj : spms) {
 
 					Timestamp stamp = (Timestamp) obj[0];
 					Date dt = new Date(stamp.getTime());
@@ -234,14 +234,14 @@ public class DataExportController {
 					if (d.equals(date)) {
 						em.setSpms((Double) obj[1]);
 					}
-				}
+				}*/
 				log.info("em {} ", em);
 				outs.add(em);
 
 				s = DateUtils.getNextDay(s);
 			}
 
-			log.info("{},{}", spms.size(), results.size());
+//			log.info("{},{}", spms.size(), results.size());
 
 		} else {
 			// other types

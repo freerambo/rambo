@@ -1,7 +1,6 @@
 package com.rambo.common.utils.excel;
 
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,7 +17,6 @@ import net.sf.jxls.transformer.XLSTransformer;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 
-import com.rambo.common.utils.DateUtils;
 
 public class JxlsUtil {
 	
@@ -62,6 +60,8 @@ public static  void export(List<ExportModel> ls, OutputStream os){
 		
 		
 		String templateFile="templates/energy_export_template.xlsx";
+//		String templateFile="templates/nms_hour_export.xlsx";
+
 		Map<String, Object> beans=new HashMap<String, Object>();
 		beans.put("results",ls);
 		exportExcel(templateFile, beans, os);
@@ -75,11 +75,11 @@ public static  void export(List<ExportModel> ls, OutputStream os){
 		// fruits
 		List<ExportModel> fruitList=new ArrayList<ExportModel>();
 		
-		ExportModel em = new ExportModel("2014-01-04",12.3,23.4,34.8);
+		ExportModel em = new ExportModel("2014-01-04",12.3,23.4);
 		
 		fruitList.add(em);
 
-		ExportModel em1 = new ExportModel("2014-01-05",14.3,23.4,3.4);
+		ExportModel em1 = new ExportModel("2014-01-05",14.3,23.4);
 		fruitList.add(em1);		
 		beans.put("results",fruitList);
 		exportExcel(templateFile, beans, os);

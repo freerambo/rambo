@@ -1,0 +1,114 @@
+21:18:10.362 [qtp667026744-21] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:i18n/messages, locale en
+21:18:13.473 [qtp667026744-24] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:i18n/messages, locale en
+21:18:14.670 [qtp667026744-23] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:i18n/messages, locale zh_CN
+21:18:16.191 [qtp667026744-25] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:i18n/messages, locale en
+21:19:31.117 [main] ERROR o.s.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from relative location [security/applicationContext-shiro.xml]
+Offending resource: URL [file:/D:/sourcecode/springside4-4.2.3.GA/generated-projects/ict-portal/target/classes/applicationContext-ict.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from URL [file:/D:/sourcecode/springside4-4.2.3.GA/generated-projects/ict-portal/target/classes/security/applicationContext-shiro.xml]; nested exception is java.io.FileNotFoundException: D:\sourcecode\springside4-4.2.3.GA\generated-projects\ict-portal\target\classes\security\applicationContext-shiro.xml (The system cannot find the path specified)
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:274) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:199) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:141) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:110) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540) ~[spring-context-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454) ~[spring-context-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106) [spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:746) [jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:238) [jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240) [jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689) [jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482) [jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.springside.modules.test.jetty.JettyFactory.reloadContext(JettyFactory.java:81) [springside-core-4.2.3-GA-tests.jar:4.2.3-GA]
+	at com.eri.ict.QuickStartServer.main(QuickStartServer.java:42) [test-classes/:na]
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from URL [file:/D:/sourcecode/springside4-4.2.3.GA/generated-projects/ict-portal/target/classes/security/applicationContext-shiro.xml]; nested exception is java.io.FileNotFoundException: D:\sourcecode\springside4-4.2.3.GA\generated-projects\ict-portal\target\classes\security\applicationContext-shiro.xml (The system cannot find the path specified)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:263) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	... 27 common frames omitted
+Caused by: java.io.FileNotFoundException: D:\sourcecode\springside4-4.2.3.GA\generated-projects\ict-portal\target\classes\security\applicationContext-shiro.xml (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_51]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_51]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_51]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_51]
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90) ~[na:1.8.0_51]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188) ~[na:1.8.0_51]
+	at org.springframework.core.io.UrlResource.getInputStream(UrlResource.java:168) ~[spring-core-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	... 31 common frames omitted
+21:19:31.118 [main] WARN  o.eclipse.jetty.webapp.WebAppContext - Failed startup of context o.e.j.w.WebAppContext{/ict-portal,file:/D:/sourcecode/springside4-4.2.3.GA/generated-projects/ict-portal/src/main/webapp/},src/main/webapp
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from relative location [security/applicationContext-shiro.xml]
+Offending resource: URL [file:/D:/sourcecode/springside4-4.2.3.GA/generated-projects/ict-portal/target/classes/applicationContext-ict.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from URL [file:/D:/sourcecode/springside4-4.2.3.GA/generated-projects/ict-portal/target/classes/security/applicationContext-shiro.xml]; nested exception is java.io.FileNotFoundException: D:\sourcecode\springside4-4.2.3.GA\generated-projects\ict-portal\target\classes\security\applicationContext-shiro.xml (The system cannot find the path specified)
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:274) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:199) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:141) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:110) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540) ~[spring-context-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454) ~[spring-context-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106) ~[spring-web-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:746) ~[jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:238) ~[jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1240) ~[jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:689) ~[jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:482) ~[jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-webapp-7.6.15.v20140411.jar:7.6.15.v20140411]
+	at org.springside.modules.test.jetty.JettyFactory.reloadContext(JettyFactory.java:81) [springside-core-4.2.3-GA-tests.jar:4.2.3-GA]
+	at com.eri.ict.QuickStartServer.main(QuickStartServer.java:42) [test-classes/:na]
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from URL [file:/D:/sourcecode/springside4-4.2.3.GA/generated-projects/ict-portal/target/classes/security/applicationContext-shiro.xml]; nested exception is java.io.FileNotFoundException: D:\sourcecode\springside4-4.2.3.GA\generated-projects\ict-portal\target\classes\security\applicationContext-shiro.xml (The system cannot find the path specified)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:343) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:263) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	... 27 common frames omitted
+Caused by: java.io.FileNotFoundException: D:\sourcecode\springside4-4.2.3.GA\generated-projects\ict-portal\target\classes\security\applicationContext-shiro.xml (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_51]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_51]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_51]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_51]
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90) ~[na:1.8.0_51]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188) ~[na:1.8.0_51]
+	at org.springframework.core.io.UrlResource.getInputStream(UrlResource.java:168) ~[spring-core-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:329) ~[spring-beans-4.0.5.RELEASE.jar:4.0.5.RELEASE]
+	... 31 common frames omitted
+21:20:19.300 [qtp667026744-24] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath:i18n/messages] not found for MessageSource: Can't find bundle for base name classpath:i18n/messages, locale en
+21:21:05.710 [qtp667026744-22] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath:/i18n/messages] not found for MessageSource: Can't find bundle for base name classpath:/i18n/messages, locale en
+21:21:06.512 [qtp667026744-22] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath:/i18n/messages] not found for MessageSource: Can't find bundle for base name classpath:/i18n/messages, locale en
+21:21:28.041 [qtp667026744-24] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:/i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:/i18n/messages, locale en
+21:21:29.084 [qtp667026744-25] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:/i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:/i18n/messages, locale en
+21:21:30.188 [qtp667026744-20] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:/i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:/i18n/messages, locale en
+21:21:31.322 [qtp667026744-22] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:/i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:/i18n/messages, locale en
+21:21:47.203 [qtp667026744-23] WARN  o.s.c.s.ResourceBundleMessageSource - ResourceBundle [classpath*:i18n/messages] not found for MessageSource: Can't find bundle for base name classpath*:i18n/messages, locale en

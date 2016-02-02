@@ -1,0 +1,28 @@
+01:12:40.667 [quartzScheduler_Worker-2] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Wed May 27 01:00:00 SGT 2015
+02:12:42.069 [quartzScheduler_Worker-1] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Wed May 27 02:00:00 SGT 2015
+03:12:42.558 [quartzScheduler_Worker-2] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Wed May 27 03:00:00 SGT 2015
+08:12:51.365 [quartzScheduler_QuartzSchedulerThread] ERROR org.quartz.core.ErrorLogger - An error occured while firing trigger 'DEFAULT.hourly'
+org.quartz.JobPersistenceException: Couldn't store trigger 'hourly' for 'hourjobDetail' job:Lock wait timeout exceeded; try restarting transaction
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeTrigger(JobStoreSupport.java:1270) ~[quartz-1.8.6.jar:na]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.triggerFired(JobStoreSupport.java:2961) ~[quartz-1.8.6.jar:na]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$38.execute(JobStoreSupport.java:2871) ~[quartz-1.8.6.jar:na]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3788) ~[quartz-1.8.6.jar:na]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.triggerFired(JobStoreSupport.java:2865) ~[quartz-1.8.6.jar:na]
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:319) ~[quartz-1.8.6.jar:na]
+Caused by: java.sql.SQLException: Lock wait timeout exceeded; try restarting transaction
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4187) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4119) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2570) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2731) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2815) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375) ~[mysql-connector-java-5.1.25.jar:na]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359) ~[mysql-connector-java-5.1.25.jar:na]
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.updateTrigger(StdJDBCDelegate.java:1295) ~[quartz-1.8.6.jar:na]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.storeTrigger(JobStoreSupport.java:1256) ~[quartz-1.8.6.jar:na]
+	... 5 common frames omitted
+08:13:40.600 [quartzScheduler_Worker-1] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Wed May 27 08:00:00 SGT 2015
+09:52:45.454 [QuartzScheduler_quartzScheduler-User1-PC1432689156180_ClusterManager] WARN  o.s.s.quartz.LocalDataSourceJobStore - This scheduler instance (User1-PC1432689156180) is still active but was recovered by another instance in the cluster.  This may cause inconsistent behavior.
+13:12:31.861 [quartzScheduler_Worker-1] ERROR c.r.erian.service.PmWlgHourService - results is null or wrong number for time Wed May 27 13:00:00 SGT 2015

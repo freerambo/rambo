@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<display-name>erian</display-name>
-	
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
@@ -40,19 +41,20 @@
 	<filter>
 		<filter-name>openEntityManagerInViewFilter</filter-name>
 		<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
-	<!-- org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [javax.persistence.EntityManagerFactory] is defined: expected single matching bean but found 4: jtaentityManagerFactory,mysqlEntityManagerFactory,spmsEntityManagerFactory,tranEntityManagerFactory
-	 -->
+		<!-- org.springframework.beans.factory.NoUniqueBeanDefinitionException: 
+			No qualifying bean of type [javax.persistence.EntityManagerFactory] is defined: 
+			expected single matching bean but found 4: jtaentityManagerFactory,mysqlEntityManagerFactory,spmsEntityManagerFactory,tranEntityManagerFactory -->
 		<init-param>
-	        <param-name>entityManagerFactoryBeanName</param-name>
-	        <param-value>jpaentityManagerFactory</param-value>
-    </init-param>
+			<param-name>entityManagerFactoryBeanName</param-name>
+			<param-value>jpaentityManagerFactory</param-value>
+		</init-param>
 	</filter>
 	<filter-mapping>
 		<filter-name>openEntityManagerInViewFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
-	<!--  shiro filter for security -->
+
+	<!-- shiro filter for security -->
 	<filter>
 		<filter-name>shiroFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -105,8 +107,8 @@
 		<error-code>404</error-code>
 		<location>/WEB-INF/views/error/404.jsp</location>
 	</error-page>
-	
-		<resource-ref>
+
+	<resource-ref>
 		<description>MySQL DS</description>
 		<res-ref-name>jdbc/DataSourceA</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>
@@ -119,5 +121,5 @@
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Container</res-auth>
 	</resource-ref>
-	
+
 </web-app>

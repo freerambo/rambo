@@ -38,8 +38,8 @@ public class SchedularController {
 	@Autowired
 	private PmWlgHourService pmWlgHourService;
 	
-	@Autowired
-	private ISchedulerService schedulerService;
+//	@Autowired
+//	private ISchedulerService schedulerService;
 	
 	/**
 	 * 
@@ -67,10 +67,10 @@ public class SchedularController {
 //		schedulerService.schedule("0/10 * * * * ?");
 //		schedulerService.schedule("default", "default", "0/10 * * * * ?");
 		
-		schedulerService.schedule("hourly", "hour", "0 12 0/1 * * ? * ");
-		schedulerService.schedule("daily", "day", "0 50 01 * * ? * ");
-		schedulerService.schedule("weekly", "week", "0 05 08 ? * MON");
-		schedulerService.schedule("monthly", "month", "0 15 08 1 * ?");
+//		schedulerService.schedule("hourly", "hour", "0 12 0/1 * * ? * ");
+//		schedulerService.schedule("daily", "day", "0 50 01 * * ? * ");
+//		schedulerService.schedule("weekly", "week", "0 05 08 ? * MON");
+//		schedulerService.schedule("monthly", "month", "0 15 08 1 * ?");
 		return "start the schedulars";
 	}
 	

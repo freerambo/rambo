@@ -53,6 +53,7 @@ public class WeixinController {
 			out = null;
 		}
 	}
+	
 
 	@RequestMapping(method = RequestMethod.POST)
 	public void post(HttpServletRequest request, HttpServletResponse response) {

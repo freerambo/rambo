@@ -32,6 +32,10 @@ public interface NmsHourDao extends PagingAndSortingRepository<NmsHour, Long>,
 	@Query("select sum (obj.value) FROM NmsHour obj where obj.meterId in ?1 and obj.unit = ?2 and obj.dateTime = ?3")
 	public Double findByMeterIdsAndUnitAndDateTime(List<String> meterIds, String unit, String time);
 	
-	@Query(value="select hour.date_time,hour.nanyang,hour.nieo,hour.spms from v_export_hour_view hour where hour.date_time between ?1 and ?2 order by hour.date_time",nativeQuery=true)
+//	@Query(value="select hour.date_time,hour.nanyang,hour.nieo,hour.spms from v_export_hour_view hour where hour.date_time between ?1 and ?2 order by hour.date_time",nativeQuery=true)
+//	List<Object[]> findByStartAndEnd(String start, String end);
+
+	@Query(value="select hour.date_time,hour.nanyang,hour.nieo from nms_hour_results hour where hour.date_time between ?1 and ?2 order by hour.date_time",nativeQuery=true)
 	List<Object[]> findByStartAndEnd(String start, String end);
+
 }

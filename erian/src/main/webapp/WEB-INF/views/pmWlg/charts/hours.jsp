@@ -6,7 +6,7 @@
 
 
 <script src="${ctx}/static/highcharts/stock/highstock.js" type="text/javascript"></script>
-	<script src="${ctx}/static/highcharts/stock/exporting.js" type="text/javascript"></script>
+<script src="${ctx}/static/highcharts/stock/exporting.js" type="text/javascript"></script>
 	
 
 <div><a href="${ctx}/pmWlg/tran/hour" class="btn" >Raw Data</a>

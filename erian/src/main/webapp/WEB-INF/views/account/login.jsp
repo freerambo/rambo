@@ -39,8 +39,8 @@
 			<div class="controls">
 				<label class="checkbox" for="rememberMe"><input type="checkbox" id="rememberMe" name="rememberMe"/> Remember me</label>
 				<input id="submit_btn" class="btn btn-primary" type="submit" value="Login"/> <a class="btn" href="${ctx}/register">Register</a>
-			 	<span class="help-block">(Admin: <b>admin/admin</b>, User: <b>user/user</b>)</span>
-			</div>
+<!-- 			 	<span class="help-block">(Admin: <b>admin/admin</b>, User: <b>user/user</b>)</span>
+ -->			</div>
 		</div>
 	</form>
 

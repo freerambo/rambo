@@ -1,0 +1,104 @@
+
+/*--project-sec--*/
+.project-sec{
+	/* padding:3em 0 0 0; */
+}
+.team_head{
+    text-align: center;
+  font-size: 2.3em;
+  font-weight: 600;
+  color: #ffa800;
+}
+/*-- sale-page --*/
+.works .clear {
+	height: 46px;
+}
+.box1  .text1 {
+	padding-bottom: 1px;
+}
+.text1 a {
+    color:#70616A;
+	font-size: 0.9em;
+	font-weight: 600;
+	margin-bottom: 5px;
+	display: block;
+	 white-space: nowrap;
+ 	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+.text1 p {
+    text-overflow:ellipsis;
+}
+
+.truncate {
+  width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text1 a:hover {
+	color: #ffa800;
+	text-decoration:none;
+}
+.works{
+margin-top:1em;
+margin-left:7em;
+
+}
+.works h3 {
+color: #EB523D;
+margin-bottom: 1em;
+font-size: 2em;
+text-align:center;
+}
+.container_12 {
+	padding: 4em 0 1em 0;
+}
+.thumb-box7{
+	padding: 1em 0 5em 0;
+}
+a.gal {
+	position: relative;
+	display: block;
+}
+a.gal span {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: url(../images/sr1.png) -102px 0 no-repeat;
+}
+a.gal:hover span{
+	background-position: center center;
+}
+.prjt-grid{
+	width: 22%;
+	float: left;
+	margin: 2% 3% 0% 0;
+}
+.box p {
+color: #9A9598;
+line-height: 1.8em;
+font-size: 0.88em;
+}
+.box img {
+	width: 100%;
+}
+.text1 {
+	padding-top:1em;
+	margin-bottom: 1em;
+}
+.box img:hover{
+	opacity:0.5;
+}
+
+
+
+
+
+
+
+

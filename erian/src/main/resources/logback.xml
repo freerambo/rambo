@@ -7,7 +7,7 @@
 	</appender>
 
 	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/tmp/logs/erian.log</file>
+		<file>logs/erian.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>logs/erian.%d{yyyy-MM-dd}.log</fileNamePattern>
 		</rollingPolicy>

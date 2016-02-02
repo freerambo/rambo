@@ -1,0 +1,54 @@
+/* header */
+#header {margin-bottom:15px;}
+
+#header h1 a {
+	color: #658A16;
+	text-decoration: none
+}
+
+#header h1 small {color: #BACE87;}
+
+/* footer */
+#footer {
+	margin-top: 15px;
+	padding: 15px 0px 0px 0px;
+	font-size: 95%;
+	text-align: center;
+	border-top: 2px solid #658A16;
+}
+
+#footer a {color: #999;}
+
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    background-color: #fff;
+}
+
+body table tbody tr a{
+	color:   darkblue 
+}
+
+
+.bg-red{
+	background-color: #EC7566
+}
+
+.bg-green{
+	background-color: #8EAD1A
+}
+.bg-blue{
+	background-color: #1A9EAD
+}
+
+.bg-other{
+	background-color: rgba(173, 26, 82, 0.4)
+}
+
+
+
+

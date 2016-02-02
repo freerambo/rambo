@@ -1,0 +1,13 @@
+.copywrite {
+  background: #525252;
+}
+.copywrite p {
+  color: #fff;
+  margin-bottom: 0.5em;
+  font-size: 0.85em;
+  text-align: center;
+  padding: 1em 0;
+}
+.copywrite p a{
+	color:#fff;
+}

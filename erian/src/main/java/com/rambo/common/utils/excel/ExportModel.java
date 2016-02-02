@@ -11,14 +11,14 @@ public class ExportModel {
 	private String dateTime;
 	private double nanyang = 0.0;
 	private double nieo = 0.0;
-	private double spms = 0.0;
+//	private double spms = 0.0;
 
 	public ExportModel() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ExportModel(String dateTime, double nanyang, double nieo, double spms) {
+	public ExportModel(String dateTime, double nanyang, double nieo/*, double spms*/) {
 		super();
 		if(nanyang < 0 && nanyang != -1){
 			nanyang = 0;
@@ -29,7 +29,7 @@ public class ExportModel {
 		this.dateTime = dateTime;
 		this.nanyang = nanyang;
 		this.nieo = nieo;
-		this.spms = spms;
+//		this.spms = spms;
 	}
 
 	public String getDateTime() {
@@ -56,13 +56,13 @@ public class ExportModel {
 		this.nieo = nieo;
 	}
 
-	public double getSpms() {
+/*	public double getSpms() {
 		return spms;
 	}
 
 	public void setSpms(double spms) {
 		this.spms = spms;
-	}
+	}*/
 
 	@Override
 	public String toString() {
@@ -77,8 +77,10 @@ public class ExportModel {
 				ExportModel em = new ExportModel(
 						obj[0] != null ? (String) obj[0] : "NA",
 						obj[1] != null? (Double) obj[1] : 0.0,
-						obj[2] != null ? (Double) obj[2] : 0.0,
-						obj[3] != null ? (Double) obj[3] : 0.0);
+						obj[2] != null ? (Double) obj[2] : 0.0
+//								,
+//						obj[3] != null ? (Double) obj[3] : 0.0
+								);
 				result.add(em);
 			}
 		}

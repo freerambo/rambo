@@ -15,5 +15,5 @@
  -->
  
  	<import resource="schedule/applicationContext-quartz-common.xml" />
-	<import resource="schedule/applicationContext-quartz-dynamic.xml" />
-</beans>
+<!-- 	<import resource="schedule/applicationContext-quartz-dynamic.xml" />
+ --></beans>

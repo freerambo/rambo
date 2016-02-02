@@ -1,0 +1,8 @@
+17:44:14.993 [main] WARN  org.apache.commons.jexl2.JexlEngine - ![0,11]: 'result.spms;' undefined variable result.spms
+17:44:14.999 [main] WARN  org.apache.commons.jexl2.JexlEngine - ![0,11]: 'result.spms;' undefined variable result.spms
+17:44:15.002 [main] WARN  org.apache.commons.jexl2.JexlEngine - ![0,11]: 'result.spms;' undefined variable result.spms
+17:44:15.003 [main] WARN  org.apache.commons.jexl2.JexlEngine - ![0,11]: 'result.spms;' undefined variable result.spms
+17:45:27.693 [main] WARN  org.apache.commons.jexl2.JexlEngine - ![0,11]: 'result.spms;' undefined variable result.spms
+17:45:27.698 [main] WARN  org.apache.commons.jexl2.JexlEngine - ![0,11]: 'result.spms;' undefined variable result.spms
+17:45:27.700 [main] WARN  org.apache.commons.jexl2.JexlEngine - ![0,11]: 'result.spms;' undefined variable result.spms
+17:45:27.701 [main] WARN  org.apache.commons.jexl2.JexlEngine - ![0,11]: 'result.spms;' undefined variable result.spms

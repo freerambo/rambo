@@ -1,0 +1,31 @@
+<script type="text/javascript">
+
+ $.getJSON("loadInfo", function(data) {
+        $("#info").html("");//清空info内容
+        $.each(data.comments, function(i, item) {
+            $("#info").append(
+                    "<div>" + item.id + "</div>" + 
+                    "<div>" + item.nickname    + "</div>" +
+                    "<div>" + item.content + "</div><hr/>");
+        });
+        });
+
+$.getJSON("../api/v1/project/", function(data) {
+			        $("#title").append(data.title+"<hr/>");
+			        $("#content").append(data.content+"<hr/>");
+			        //jquery解析map数据
+			        $.each(data.infomap,function(key,value){
+			            $("#mapinfo").append(key+"----"+value+"<br/><hr/>");
+			        });
+			        //解析数组
+			        $.each(data.comments, function(i, item) {
+			            $("#info").append(
+			                    "<div>" + item.id + "</div>" + 
+			                    "<div>" + item.nickname    + "</div>" +
+			                    "<div>" + item.content + "</div><hr/>");
+			        });
+			        });
+			        
+			        
+			        });
+</script>

@@ -40,7 +40,7 @@
 			<div class="control-group">
 				<label class="control-label">RegisterDate:</label>
 				<div class="controls">
-					<span class="help-inline" style="padding:5px 0px"><fmt:formatDate value="${user.registerDate}" pattern="yyyy年MM月dd日  HH时mm分ss秒" /></span>
+					<span class="help-inline" style="padding:5px 0px"><fmt:formatDate value="${user.registerDate}" pattern="yyyy-MM-dd  HH:mm:ss" /></span>
 				</div>
 			</div>
 			<div class="form-actions">

@@ -17,6 +17,6 @@
 
 <body>
 	<h2>500 - internal Sever error.</h2>
-	<p><a href="<c:url value="http://ict.eri.ntu.edu.sg:8000/manager/html"/>">restart the server</a></p>
+	<p><a href="<c:url value="https://${pageContext.request.serverName}:${pageContext.request.serverPort}/manager"/>">restart the server</a></p>
 </body>
 </html>

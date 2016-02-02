@@ -10,7 +10,7 @@ package com.rambo.wechat.service;
  * 
  * 继承自RuntimeException, 从由Spring管理事务的函数中抛出时会触发事务回滚.
  * 
- * @author calvin
+ * @author rambo
  */
 public class ServiceException extends RuntimeException {
 
