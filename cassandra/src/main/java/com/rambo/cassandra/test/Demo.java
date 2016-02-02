@@ -19,9 +19,12 @@ public class Demo {
 	static Logger log = LoggerFactory.getLogger(Demo.class);
 
 	public static void main(String[] args) {
-		// insert();
+//		 insert();
+//		findAll() ;
+//		findByName();
+		insertPerson();
 		findOne();
-		findAll() ;
+
 		ct.close();
 	}
 
@@ -36,7 +39,7 @@ public class Demo {
 	}
 
 	static void findOne() {
-		Person person = repository.findOne("4");
+		Person person = repository.findOne("10001");
 		log.info(person.toString());
 	}
 	
@@ -44,4 +47,17 @@ public class Demo {
 		List<Person> persons = (List<Person>) repository.findAll();
 		log.info(persons.toString());
 	}
+	static void findByName() {
+		List<Person> persons = repository.findByName("hello504");
+		log.info(persons.toString());
+	}
+	
+	static void insertPerson() {
+		Person p = new Person("10001","test10001",34);
+		p = repository.save(p);
+		
+		log.info(p.toString());
+		
+	}
+	
 }
