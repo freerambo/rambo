@@ -97,12 +97,11 @@ public class IEEE1888WriteDemo
 		PointValueStruct pv2 = new PointValueStruct();
 		Calendar c2 = Calendar.getInstance();
 		Date t = new Date();
-		c2.setTime(new Date(t.getTime() + 1000));// make it different with PV1
-													// by adding 1 second
+		c2.setTime(new Date(t.getTime() + 1000));// make it different with PV1 by adding 1 second
 		pv2.setTime(c2); // add time
 		pv2.setValue("2");// add Value
 		pointdata1.getPointValueArray().add(pv2);
-
+		
 		// add pointId2
 		PointDataStruct pointdata2 = new PointDataStruct();
 		pointdata2.setPointID(pointId2);
