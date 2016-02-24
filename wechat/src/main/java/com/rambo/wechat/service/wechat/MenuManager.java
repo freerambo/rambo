@@ -22,9 +22,9 @@ public class MenuManager {
 	public static void main(String[] args) {
 //		log.info(JSONObject.fromObject(getMenu()).toString());
 		// 第三方用户唯一凭证
-		String appId = "wx20da1fd47c5d9ca8";
+		String appId = "XXXXX";
 		// 第三方用户唯一凭证密钥
-		String appSecret = "f367a067fe6c3224e8f078ee70429a30";
+		String appSecret = "XXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 		// 调用接口获取access_token
 		AccessToken at = WeixinUtil.getAccessToken(appId, appSecret);
