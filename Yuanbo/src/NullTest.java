@@ -4,6 +4,12 @@ public class NullTest {
     }
     
     public static void testNullObject() {
+    	int i =0;
+    	Integer k =0;
+
+//    	 System.out.println(i == null); // error! int can not be compared with null
+    	System.out.println(k == null); // ok, outpu false
+    	
         if (null instanceof java.lang.Object) {
             System.out.println("null Ù”⁄java.lang.Object¿‡–Õ");
         } else {
