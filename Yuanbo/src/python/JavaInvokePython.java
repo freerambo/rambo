@@ -13,6 +13,7 @@ public class JavaInvokePython {
          try{
         	 
                  System.out.println("start");
+                 Long start = System.currentTimeMillis();
                  Process pr = Runtime.getRuntime().exec("python test.py");
                  
                  BufferedReader in = new BufferedReader(new
@@ -23,7 +24,8 @@ public class JavaInvokePython {
                  }
                  in.close();
                  pr.waitFor();
-                 System.out.println("end");                 
+                 Long end  =  System.currentTimeMillis();
+                 System.out.println("end " +  (end -start)/1000.0);                 
                  // deal with log file
                  
          } catch (Exception e){

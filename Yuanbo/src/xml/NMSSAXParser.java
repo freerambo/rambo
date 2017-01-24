@@ -118,7 +118,7 @@ public class NMSSAXParser {
 		NMSRecordHandler NMSRecordHandler = (new NMSSAXParser()).new NMSRecordHandler();
 		parser.setContentHandler(NMSRecordHandler);
 
-		parser.parse("C:\\Users\\User1\\Desktop\\NMS_STD_20141105060713973.xml");
+		parser.parse("D:\\NMS_STD_20150703060241764.xml");
 		System.out.println(NMSRecordHandler.NMSRecords);
 
 	}
@@ -180,7 +180,7 @@ public class NMSSAXParser {
 		@Override
 		public String toString() {
 			return "NMSRecord [ name=" + name + ", price=" + price
-					+ "]";
+					+ "]\n";
 		}
 		
 	

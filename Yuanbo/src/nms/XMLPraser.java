@@ -18,7 +18,7 @@ public class XMLPraser {
 		NMSRecordHandler NMSRecordHandler = new NMSRecordHandler();
 		parser.setContentHandler(NMSRecordHandler);
 
-		parser.parse("C:\\Users\\User1\\Desktop\\NMS_STD_20141105060713973.xml");
+		parser.parse("D:\\NMS_STD_20150703060241764.xml");
 
 		for (NMSRecord obj : NMSRecordHandler.records) {
 			System.out.println(obj);

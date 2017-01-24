@@ -1,0 +1,277 @@
+<div class="page-header">
+    <h1>Device Details : {{device.name}}</h1>
+</div>
+
+<div class="container-fluid">
+ <div class="form-group row">
+      <label  class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-5">
+		{{device.name}}
+      </div>
+      <label  class="col-sm-1 col-form-label">Type</label>
+      <div class="col-sm-4">
+		{{device.typeName}} 
+		
+      </div>
+ </div>
+ 
+<div class="form-group row">
+      <label for="description" class="col-sm-2 col-form-label">Description</label>
+      <div class="col-sm-10">
+{{device.description}}
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="vendor" class="col-sm-2 col-form-label">Vendor</label>
+      <div class="col-sm-5">
+{{device.vendor}}
+      </div>
+       <label class="col-sm-2">Programmable</label>
+      <div class="col-sm-3">
+        <div class="form-check">
+<!-- {{device.isProgrammable}} -->
+
+<div ng-show="device.isProgrammable == 0">
+		NO 
+</div>
+<div ng-show="device.isProgrammable == 1">
+		YES 
+</div>
+        </div>
+      </div>
+    </div>
+     <div class="form-group row">
+      <label for="Model" class="col-sm-2 col-form-label">Model</label>
+      <div class="col-sm-5">
+{{device.model}}
+      </div>
+      
+      <label class="col-sm-2">Connected</label>
+      <div class="col-sm-3">
+        <div class="form-check">
+<div ng-show="device.isConnected == 0">
+		NO 
+</div>
+<div ng-show="device.isConnected == 1">
+		YES 
+</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Location" class="col-sm-2 col-form-label">Location</label>
+      <div class="col-sm-10">
+{{device.location}}	
+      </div>
+    </div>
+      
+      <div class="form-group row">
+      <label for="ip" class="col-sm-2 col-form-label">IP</label>
+      <div class="col-sm-5">
+		{{device.IPAdress}}
+      </div>
+      <label for="ip" class="col-sm-1 col-form-label">Port</label>
+      <div class="col-sm-2">
+{{device.portNumber}} 
+     </div>
+    </div>
+    <div class="form-group row">
+      <label for="Bus" class="col-sm-2 col-form-label" >BUS</label>
+      <div class="col-sm-10">
+		
+		<div ng-show="device.busID == 2">
+			AC 
+		</div>
+		<div ng-show="device.busID == 1">
+				DC 
+		</div>
+		<div ng-show="device.busID == 3">
+				ALL 
+		</div>
+        </div>   
+    </div>
+     <div class="form-group row">
+      <label for="command" class="col-sm-2 col-form-label">ReadCommand: </label>
+      <div class="col-sm-10">
+			{{device.readCommand}}
+      </div>
+    </div>
+  <div class="form-group row">
+      <label for="comments" class="col-sm-2 col-form-label">Comments: </label>
+      <div class="col-sm-10">
+			{{device.comments}}
+			Please input some comments here 
+      </div>
+    </div>
+    
+     
+        <div class="form-group">
+        <button  class="btn btn-lg btn-success" ng-click="update(device.ID)">
+            <span class="glyphicon glyphicon-plus-sign"></span>Update
+        </button>
+        <button  ng-click="cancel()" class="btn btn-lg btn-default" data-dismiss="modal">
+            <msg key="cancel"></msg>
+        </button>
+    </div>
+   </div>  
+   
+   
+       <div class="panel panel-default panel-table">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-xs-6">
+                        <h3 class="panel-title">Variables</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped table-bordered table-list">
+                    <thead>
+                        <tr>
+                            <th>Operation</th>
+                            <th class="hidden-xs">Name</th>
+                            <th>Description</th>
+                         <!--    <th>Get Command</th>
+                            <th>Set Command</th> -->
+                            <th>Unit</th>
+                            <th>Interval</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr ng-repeat="variable in variables">
+                             <td align="center"> <span class="glyphicon glyphicon-edit" aria-hidden="true" ng-click="update(device.ID)"></span>| <span class="glyphicon glyphicon-trash" aria-hidden="true" ng-click="del(device.ID)"></span></td>
+                            <td>{{variable.name}}</td>
+                            <td>{{variable.description}}</td>
+                            <!-- <td>
+                                <select id="Select1">
+                                    <option>No value</option>
+                                    <option>Get Voltage</option>
+                                    <option>Set Voltage</option>
+                                    <option>Get Current</option>
+                                    <option>Set Current</option>
+                                    <option>Get Status</option>
+                                    <option>Get Power</option>
+                                    <option>Set Power</option>
+                                </select>
+                                {{variable.getCommandID}}
+                            </td>
+                            <td>
+                                 {{variable.setCommandID}}
+                            </td> -->
+                         
+                            <td>{{variable.unitID}}</td>
+                            <td>{{variable.updatingDuration}}</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+
+		<div class="form-group">
+			<button type="button" class="btn btn-success btn-number" data-toggle="modal" data-target="#myModal">
+				<span class="glyphicon glyphicon-plus"></span> Add
+			</button>
+		</div>
+	</div>
+            
+            
+          
+
+        </div>
+        
+        
+  <!--            <div class="panel panel-default panel-table">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-xs-6">
+                        <h3 class="panel-title">Commands</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="panel-body">
+
+				<div class="form-group row">
+			 <ul  class="form-group row"> 	<label class="col-sm-4 col-form-label">Name</label>
+						<label class="col-sm-8">Command String</label> </ul>
+ <ul  class="form-group row" ng-repeat="command in commands">
+		
+						<label class="col-sm-4 col-form-label">{{command.name}}</label>
+						<label class="col-sm-8">{{command.formatString}}</label>
+					
+					</ul>
+					<div ng-if="!commands">
+						<label class="col-sm-12 col-form-label">No commands avaliable</label>
+					</div>
+		
+		
+				</div> 
+		
+				<div class="form-group">
+			<button type="button" class="btn btn-success btn-number">
+				<span class="glyphicon glyphicon-plus"></span> Add
+			</button>
+		</div>
+		
+			</div>
+            
+            </div>
+   
+   -->
+   
+   <!-- Trigger the modal with a button -->
+<!--   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+ -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+      <form role="form" ng-submit="saveVariable(device.ID)" name="variableForm" novalidate>
+     
+	      
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title">Variables Management</h4>
+	        </div>
+	        <div class="modal-body">
+	                            
+   <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" ng-model="newVariable.name" ng-required="true" placeholder="please input the Name">
+      </div>
+    </div>    
+       
+       <div class="form-group row">
+      <label for="unitID" class="col-sm-2 col-form-label">UnitID</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="unitID" ng-model="newVariable.unitID" ng-required="true" placeholder="please input the unitID">
+      </div>
+    </div> 
+       <div class="form-group row">
+      <label for="Interval" class="col-sm-2 col-form-label">Interval</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="updatingDuration" ng-model="newVariable.updatingDuration" ng-required="true" placeholder="please input the updatingDuration">
+      </div>
+    </div>    
+	<div class="form-group row">
+      <label for="description" class="col-sm-2 col-form-label">Description</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="description" ng-model="newVariable.description" ng-required="true" placeholder="please input the description">
+      </div>
+    </div>                             
+	                            
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+     

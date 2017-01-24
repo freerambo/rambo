@@ -42,7 +42,6 @@ public class BasicTest extends OpenForecastTestCase
         DataPoint dp2 = new Observation( 1.0 );
         dp2.setIndependentValue( "t", 3.0 );
         dp2.setIndependentValue( "x", 2.0 );
-        
         assertTrue( dp1.equals( dp2 ) );
     }
     

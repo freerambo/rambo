@@ -21,5 +21,7 @@ public class SetDuplicate {
 		List<T> B = new ArrayList<T>();
 		A.removeAll(B);
 		
+		
+		
 	}
 }
