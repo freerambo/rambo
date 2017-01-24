@@ -1,0 +1,46 @@
+/* some elements used in demo only */
+.spinner-preview {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	margin-top: 60px;
+}
+.spinner-preview .spinner {
+ left: auto !important;
+}
+
+.dropdown-preview {
+	margin: 0 5px;
+	display: inline-block;
+}
+.dropdown-preview  > .dropdown-menu {
+	display: block;
+	position: static;
+	margin-bottom: 5px;
+}
+
+
+.dc-grid {
+	border-style: solid;
+	border-color: #ff0000;
+	padding: 5px;
+}
+
+.bic-grid {
+	border-style: solid;
+	border-color: #ff0000  #ff0000  #0000ff  #0000ff ;
+	padding: 5px;
+}
+
+.ac-grid {
+	border-style: solid;
+	border-color: #0000ff ;
+	padding: 5px;
+}
+ul{
+	list-style:none;
+	padding-left:0;
+}
+
+
+

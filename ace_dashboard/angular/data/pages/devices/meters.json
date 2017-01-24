@@ -1,0 +1,149 @@
+{
+	"AC":[
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter9(Grid Simulator)",
+			"totalReactivePower":0.0,
+			"meterType":"AC",
+			"totalActivePower":0.0,
+			"meterNo":2,
+			"meterDescription":"Grid Simulator",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":0.0
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter10(AC Source)",
+			"totalReactivePower":0.0,
+			"meterType":"AC",
+			"totalActivePower":0.0,
+			"meterNo":1,
+			"meterDescription":"AC Source",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":0.0
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter11(AC Load)",
+			"totalReactivePower":0.0,
+			"meterType":"AC",
+			"totalActivePower":0.0,
+			"meterNo":3,
+			"meterDescription":"AC Load",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":0.0
+		}
+	],
+	"DC":[
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter1(ESS1)",
+			"totalReactivePower":0.0,
+			"meterType":"DC",
+			"totalActivePower":0.0,
+			"meterNo":1,
+			"meterDescription":"Lithium Ion Battery",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":3.585E-42
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter2(ESS2)",
+			"totalReactivePower":0.0,
+			"meterType":"DC",
+			"totalActivePower":0.0,
+			"meterNo":2,
+			"meterDescription":"Lead Carbon Battery",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":1.354E-42
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter3(PV1)",
+			"totalReactivePower":0.0,
+			"meterType":"DC",
+			"totalActivePower":0.0,
+			"meterNo":3,
+			"meterDescription":"PV 1",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":0.0
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter4(BIC1 DC)",
+			"totalReactivePower":0.0,
+			"meterType":"DC",
+			"totalActivePower":0.0,
+			"meterNo":4,
+			"meterDescription":"BIC1 DC",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":1.96E-43
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter5(PV2)",
+			"totalReactivePower":0.0,
+			"meterType":"DC",
+			"totalActivePower":0.0,
+			"meterNo":5,
+			"meterDescription":"PV 2",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":0.0
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter6(BIC2)",
+			"totalReactivePower":0.0,
+			"meterType":"DC",
+			"totalActivePower":0.0,
+			"meterNo":6,
+			"meterDescription":"BIC2",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":0.0
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter7(DC Source)",
+			"totalReactivePower":0.0,
+			"meterType":"DC",
+			"totalActivePower":0.0,
+			"meterNo":7,
+			"meterDescription":"DC Source",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":1.0E-43
+		},
+		{
+			"totalApparentPower":0.0,
+			"current":0.0,
+			"meterName":"Meter8(DC load)",
+			"totalReactivePower":0.0,
+			"meterType":"DC",
+			"totalActivePower":0.0,
+			"meterNo":8,
+			"meterDescription":"DC Load",
+			"power":0.0,
+			"voltage":0.0,
+			"energy":3.9248E-41
+		}
+	]
+}

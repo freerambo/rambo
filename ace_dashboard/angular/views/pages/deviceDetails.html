@@ -1,0 +1,125 @@
+<div class="page-header">
+	<h1> <strong>{{info.deviceId}}</strong></h1>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div widget-box class="widget-box">
+            <widget-header toolbar="{toggle: false, close: false}">Device Info : {{info.deviceId}}</widget-header>
+
+            <div class="widget-body">
+                <div class="widget-main">
+                    <div ng-repeat="(key,value) in info">
+                        <label class="bolder blue">{{ key |uppercase}}</label> ：
+                        <label class="bolder ">{{value}}</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- /.span -->
+
+        <div class="col-xs-12 col-sm-6">
+            <div widget-box class="widget-box">
+                <widget-header toolbar="{toggle: false, close: false}"> Running Values</widget-header>
+
+                <div class="widget-body">
+                    <div class="widget-main">
+
+
+
+                        <div ng-repeat="(key,value) in variables">
+                            <label class="bolder blue">{{ key }}</label> ：
+                            <label class="bolder">{{value}}</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.span -->
+
+</div>
+
+<div class="row">
+            <div class="col-xs-12 col-sm-6">
+
+                <div widget-box class="widget-box">
+                    <widget-header toolbar="{toggle: false, close: false}" class="bolder"> Settings</widget-header>
+
+                    <div class="widget-body">
+                        <div class="widget-main">
+
+
+
+                            <div  ng-repeat="field in settings">
+
+
+                                <div ng-switch="field.type">
+                                    <div ng-switch-when="text">
+
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label bolder blue">
+                                                {{ field.name }}
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <input type="text" ng-model="field.value" class="col-xs-10 col-sm-5" />
+                                            </div>
+                                        </div>
+                                        <div class="space"></div>
+                                    </div>
+
+                                    <div ng-switch-when="radio">
+
+
+                                        <div class="control-group">
+                                            <label class="control-label bolder blue">{{ field.name }}</label>
+                                            <div class="radio" ng-repeat="choice in field.data">
+                                                <label>
+                                                    <input name="single-{{ field.name }}" type="radio"  id="single-{{ choice[0] }}" class="ace" data-ng-value="true"/><span class="lbl"> {{ choice[1] }}</span>
+                                                </label>
+                                            </div>
+
+                                    </div>
+                                    <div ng-switch-when="checkbox">
+                                        <h5>Checkbox field</h5>
+                                        <hr/>
+                                        <!-- code to render a checkbox block -->
+                                        <div ng-repeat="choice in field.choices">
+                                            <label for="multiple-{{ choice.id }}">
+                                                <input type="checkbox" ng-model="choice.selected" ng-value="choice.id" name="multiple-{{field.id}}" id="multiple-{{ choice.id }}" />{{ choice.name }}</label>
+                                        </div>
+                                    </div>
+                                    <!-- FALLBACK -->
+                                    <div ng-switch-default>Error. Invalid HTML element type.</div>
+
+
+
+                            </div>
+
+</div>
+
+                        </div>
+
+                            <div class="form-group">
+                                <button type="submit"  class="btn btn-lg btn-primary">
+                                    Save
+                                </button>
+                                <button type="button"  class="btn btn-lg btn-default">
+                                    Cancel
+                                </button>
+                            </div>
+                    </div>
+                </div>
+
+
+
+            </div><!-- /.span -->
+</div>
+
+
+</div>
+
+
+

@@ -1,0 +1,54 @@
+[
+	{
+		"color": "red",
+		"icon": "fa fa-fire",
+		"number": "26.3",
+		"content": ["Temperature"],
+		"badge-success": "4%"
+	},
+	{
+		"color": "pink",
+		"icon": "fa fa-sun-o",
+		"number": "115.3",
+		"content": ["Solar Radiation"],
+		"stat-success": "+22%"
+	},
+	{
+		"color": "green",
+		"icon": "fa fa-bolt",
+		"number": "114",
+		"content": ["Energy Generation"],
+		"stat-success": "+3%"
+	},
+	{
+		"id": "dc-grid",
+		"color": "orange2",
+		"chart": "[396,358,377,368,398,380,385,378]",
+		"number": "380",
+		"content": ["DC Grid"],
+		"badge-success": "2.2%"
+	},
+	{
+		"id": "ac-grid",
+		"color": "blue",
+		"chart": "[196,128,202,177,154,94,100,170,224]",
+		"number": "110",
+		"content": ["AC Grid"],
+		"stat-important": "7.2%"
+	},
+	{
+		"color": "blue",
+		"icon": "fa fa-bus",
+		"number": "109",
+		"content": ["Energy Consumption"],
+		"stat-important": "8%"
+
+	},
+	{
+		"id": "energy-used",
+		"color": "blue2",
+		"progress": "62",
+		"text": "energy used",
+		"content": ["<span class='bigger-110'>~</span> 58KWh remaining"]
+	}
+]

@@ -1,0 +1,32 @@
+[
+	{
+		"name": "DC load 1",
+		"price": "3999",
+		"old_price": "2999",
+		"status": "running"
+	},
+	{
+		"name": "DC load 2",
+		"price": "1645",
+		"old_price": "",
+		"status": "stopped"
+	},
+	{
+		"name": "AC load 1",
+		"price": "1500",
+		"old_price": "",
+		"status": "pending"
+	},
+	{
+		"name": "AC load 2",
+		"price": "1095",
+		"old_price": "2499",
+		"status": "disconnect"
+	},
+	{
+		"name": "Dc Load 3",
+		"price": "322",
+		"old_price": "",
+		"status": "new"
+	}
+]

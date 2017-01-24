@@ -1,0 +1,329 @@
+<!--<div class="page-header">
+	<h1>Devices <small><i class="ace-icon fa fa-angle-double-right"></i> Draggabble Devices Boxes with running values</small></h1>
+</div>-->
+
+<div ng-show="contentLoaded" jq-sortable options="sortableOpts" connect-with="'.widget-container-col'" target="'.widget-container-col'" save="true">
+	<div class="page-header">
+		<h1> <i class="ace-icon fa fa-th red"></i> DC Grid <span color="red">380V</span> </h1>
+	</div>
+    <div class="dc-grid">
+        <div class="row" >
+
+
+                <div class="col-xs-12 col-sm-3 widget-container-col" ng-repeat="battery in batteries">
+                    <div class="widget-box widget-color-purple light-border" id="battery-{{battery.meterNo}}">
+                        <div class="widget-header">
+                            <h5 class="widget-title smaller">{{battery.description}}</h5>
+
+                            <div class="widget-toolbar" ng-click="changPath(battery.meterName)">
+             <!--                                               <span class="label label-success">
+                                                                <i class="ace-icon fa fa-arrow-up"></i>
+                                                            </span>-->
+                                <span class="badge badge-info" >info</span>
+
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="col-sm-6 widget-main alert alert-info" style="height: 120px; ">
+
+                                <p><strong>{{battery.voltage | number: 2}}</strong> V</p>
+                                <p><strong>{{battery.current | number: 2}}</strong> A</p>
+                                <p><strong>{{battery.power | number: 2}}</strong> Kw</p>
+                                <p><strong>{{battery.energy }}</strong> Kwh</p>
+                            </div>
+                            <div class="col-sm-6 widget-main alert alert-info"  style="height: 120px; ">
+                                    <img class="pull-right "src="icons/battery-60x60.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 widget-container-col" ng-repeat="pv in pvs">
+                    <div class="widget-box widget-color-blue3 light-border" id="pv-{{pv.meterNo}}">
+                        <div class="widget-header">
+                            <h5 class="widget-title smaller">{{pv.description}}</h5>
+
+                            <div class="widget-toolbar" ng-click="changPath(pv.meterName)">
+                                <!--                                               <span class="label label-success">
+                                                                                   <i class="ace-icon fa fa-arrow-up"></i>
+                                                                               </span>-->
+                                <span class="badge badge-info" >info</span>
+
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="col-sm-6 widget-main alert alert-info" style="height: 120px; ">
+
+                                <p><strong>{{pv.voltage| number: 2}}</strong> V</p>
+                                <p><strong>{{pv.current| number: 2}}</strong> A</p>
+                                <p><strong>{{pv.power| number: 2}}</strong> Kw</p>
+                                <p><strong>{{pv.energy}}</strong> Kwh</p>
+                            </div>
+                            <div class="col-sm-6 widget-main alert alert-info"  style="height: 120px; ">
+                                <img class="pull-right "src="icons/pv-60x60.png">
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+
+                <div class="col-xs-12 col-sm-3 widget-container-col" ng-repeat="dcsource in dcsources">
+                    <div class="widget-box widget-color-red light-border" id="dcsource-{{dcsource.meterNo}}">
+                        <div class="widget-header">
+                            <h5 class="widget-title smaller">{{dcsource.description}}</h5>
+
+                            <div class="widget-toolbar" ng-click="changPath(dcsource.meterName)">
+                                <!--                                               <span class="label label-success">
+                                                                                   <i class="ace-icon fa fa-arrow-up"></i>
+                                                                               </span>-->
+                                <span class="badge badge-info" >info</span>
+
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="col-sm-6 widget-main alert alert-info" style="height: 120px; ">
+
+                                <p><strong>{{dcsource.voltage| number: 2}}</strong> V</p>
+                                <p><strong>{{dcsource.current| number: 2}}</strong> A</p>
+                                <p><strong>{{dcsource.power| number: 2}}</strong> Kw</p>
+                                <p><strong>{{dcsource.energy}}</strong> Kwh</p>
+                            </div>
+                            <div class="col-sm-6 widget-main alert alert-info"  style="height: 120px; ">
+                                <img class="pull-right "src="icons/dc-src-60x60.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 widget-container-col" ng-repeat="dcload in dcloads">
+                    <div class="widget-box widget-color-grey light-border" id="dcsource-{{dcload.meterNo}}">
+                        <div class="widget-header">
+                            <h5 class="widget-title smaller">{{dcload.description}}</h5>
+
+                            <div class="widget-toolbar" ng-click="changPath(dcload.meterName)">
+                                <!--                                               <span class="label label-success">
+                                                                                   <i class="ace-icon fa fa-arrow-up"></i>
+                                                                               </span>-->
+                                <span class="badge badge-info" >info</span>
+
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="col-sm-6 widget-main alert alert-info" style="height: 120px; ">
+
+                                <p><strong>{{dcload.voltage | number: 2}} </strong> V</p>
+                                <p><strong>{{dcload.current | number: 2}} </strong> A</p>
+                                <p><strong>{{dcload.power | number: 2}} </strong> Kw</p>
+                                <p><strong>{{dcload.energy}} </strong> Kwh</p>
+                            </div>
+                            <div class="col-sm-6 widget-main alert alert-info"  style="height: 120px; ">
+<!--
+                                <img class="pull-right "src="icons/arrow-up-1-60x60.png">
+-->
+                                <img class="pull-right "src="icons/dc-load-60x60.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+	</div>
+
+	<div class="space"></div>
+
+<hr />
+
+    <!-- BIC -->
+	<div class="page-header">
+		<h1> <i class="ace-icon fa fa-window-restore green"></i> Bi-directional Converters</h1>
+	</div>
+	<div ng-show="contentLoaded" jq-sortable options="sortableOpts" connect-with="'.widget-container-col'" target="'.widget-container-col'" save="true">
+
+        <div class="bic-grid">
+
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-3 widget-container-col" ng-repeat="bic in bics">
+                    <div class="widget-box widget-color-green light-border" id="bic-{{bic.meterNo}}">
+                        <div class="widget-header">
+                            <h5 class="widget-title smaller">{{bic.description}}</h5>
+
+                            <div class="widget-toolbar" ng-click="changPath(bic.meterName)">
+                                <!--                                               <span class="label label-success">
+                                                                                   <i class="ace-icon fa fa-arrow-up"></i>
+                                                                               </span>-->
+                                <span class="badge badge-info" >info</span>
+
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="col-sm-6 widget-main alert alert-info" style="height: 120px; ">
+
+                                <p><strong>{{bic.voltage | number: 2}}</strong> V</p>
+                                <p><strong>{{bic.current| number: 2}}</strong> A</p>
+                                <p><strong>{{bic.power| number: 2}}</strong> Kw</p>
+                                <p><strong>{{bic.energy}}</strong> Kwh</p>
+                            </div>
+                            <div class="col-sm-6 widget-main alert alert-info"  style="height: 120px; ">
+                                <!--
+                                                                <img class="pull-right "src="icons/arrow-up-1-60x60.png">
+                                -->
+                                <img class="pull-right "src="icons/ac-dc-conv-60x60.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+      </div>
+		<div class="space"></div>
+
+		<hr />
+
+
+
+            <div class="page-header">
+                <h1> <i class="ace-icon fa fa-superpowers blue"></i> AC Grid 100/200V</h1>
+            </div>
+            <div ng-show="contentLoaded" jq-sortable options="sortableOpts" connect-with="'.widget-container-col'" target="'.widget-container-col'" save="true">
+
+                <div class="ac-grid">
+
+
+                    <div class="row">
+
+
+                        <div class="col-xs-12 col-sm-3 widget-container-col" ng-repeat="acsimulator in acsimulators">
+                            <div class="widget-box widget-color-red light-border" id="acsimulator-{{acsimulator.meterNo}}">
+                                <div class="widget-header">
+                                    <h5 class="widget-title smaller">{{acsimulator.description}}</h5>
+
+                                    <div class="widget-toolbar" ng-click="changPath(acsimulator.meterName)">
+                                        <!--                                               <span class="label label-success">
+                                                                                           <i class="ace-icon fa fa-arrow-up"></i>
+                                                                                       </span>-->
+                                        <span class="badge badge-info" >info</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="col-sm-6 widget-main alert alert-info" style="height: 120px; ">
+
+                                        <p><strong>{{acsimulator.voltage| number: 2}}</strong> V</p>
+                                        <p><strong>{{acsimulator.current| number: 2}}</strong> A</p>
+                                        <p><strong>{{acsimulator.power| number: 2}}</strong> Kw</p>
+                                        <p><strong>{{acsimulator.energy}}</strong> Kwh</p>
+                                    </div>
+                                    <div class="col-sm-6 widget-main alert alert-info"  style="height: 120px; ">
+                                        <img class="pull-right "src="icons/generator-60x60.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 widget-container-col" ng-repeat="acsource in acsources">
+                            <div class="widget-box widget-color-red light-border" id="acsource-{{acsource.meterNo}}">
+                                <div class="widget-header">
+                                    <h5 class="widget-title smaller">{{acsource.description}}</h5>
+
+                                    <div class="widget-toolbar" ng-click="changPath(acsource.meterName)">
+                                        <!--                                               <span class="label label-success">
+                                                                                           <i class="ace-icon fa fa-arrow-up"></i>
+                                                                                       </span>-->
+                                        <span class="badge badge-info" >info</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="col-sm-6 widget-main alert alert-info" style="height: 120px; ">
+
+                                        <p><strong>{{acsource.voltage| number: 2}}</strong> V</p>
+                                        <p><strong>{{acsource.current| number: 2}}</strong> A</p>
+                                        <p><strong>{{acsource.power| number: 2}}</strong> Kw</p>
+                                        <p><strong>{{acsource.energy}}</strong> Kwh</p>
+                                    </div>
+                                    <div class="col-sm-6 widget-main alert alert-info"  style="height: 120px; ">
+                                        <img class="pull-right "src="icons/ac-src-60x60.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-3 widget-container-col" ng-repeat="acload in acloads">
+                            <div class="widget-box widget-color-grey light-border" id="acload-{{acload.meterNo}}">
+                                <div class="widget-header">
+                                    <h5 class="widget-title smaller">{{acload.description}}</h5>
+
+                                    <div class="widget-toolbar" ng-click="changPath(acload.meterName)">
+                                        <!--                                               <span class="label label-success">
+                                                                                           <i class="ace-icon fa fa-arrow-up"></i>
+                                                                                       </span>-->
+                                        <span class="badge badge-info" >info</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="col-sm-6 widget-main alert alert-info" style="height: 120px; ">
+
+                                        <p><strong>{{acload.voltage | number: 2}}</strong> V</p>
+                                        <p><strong>{{acload.current| number: 2}}</strong> A</p>
+                                        <p><strong>{{acload.power| number: 2}}</strong> Kw</p>
+                                        <p><strong>{{acload.energy}}</strong> Kwh</p>
+                                    </div>
+                                    <div class="col-sm-6 widget-main alert alert-info"  style="height: 120px; ">
+                                        <img class="pull-right "src="icons/ac-load-60x60.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+
+                </div>
+
+                <div class="space"></div>
+
+                <hr />
+
+
+                <div class="page-header">
+                    <h1> <i class="ace-icon fa fa-picture-o"></i> Dashboard</h1>
+                </div>
+                <div ng-show="contentLoaded" jq-sortable options="sortableOpts" connect-with="'.widget-container-col'" target="'.widget-container-col'" save="true">
+
+                    <!--<div>
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=40&txt=1200%C3%97350&w=1200&h=350">
+                    </div>-->
+
+                    <div id="container" style="height: 400px; min-width: 310px"></div>
+
+                    <!-- <div id="container" style="height: 1200px; min-width: 350px"></div>-->
+
+                    <div class="space"></div>
+
+                    <hr />
+
+
+ <div class="text-center">
+	<div class="pull-left">
+		<button type="button" class="btn btn-white btn-sm btn-info" ng-click="button_reload()"><i class="fa fa-refresh"></i></button>
+		<button type="button" class="btn btn-white btn-sm btn-info" ng-click="button_fullscreen()"><i class="fa fa-arrows"></i></button>
+		<button type="button" class="btn btn-white btn-sm btn-info" ng-click="button_toggle()"><i class="fa fa-eye"></i></button>
+	</div>
+
+	<button type="reset" class="btn btn-danger btn-white btn-bold btn-round" ng-click="resetStorage()">Reset Position/State</button>
+</div>
+
+</div>

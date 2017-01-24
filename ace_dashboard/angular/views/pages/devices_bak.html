@@ -1,0 +1,457 @@
+<!--<div class="page-header">
+	<h1>Devices <small><i class="ace-icon fa fa-angle-double-right"></i> Draggabble Devices Boxes with running values</small></h1>
+</div>-->
+
+
+<div ng-show="contentLoaded" jq-sortable options="sortableOpts" connect-with="'.widget-container-col'" target="'.widget-container-col'" save="true">
+	<div class="page-header">
+		<h1> <i class="ace-icon fa fa-th red"></i> DC Grid <span color="red">380V</span> </h1>
+	</div>
+    <div class="dc-grid">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-5">
+                <div class="widget-box widget-color-purple light-border" id="widget-box-5">
+                    <div class="widget-header">
+                        <h5 class="widget-title smaller" ng-click="changPath('deviceID')">Battery 1</h5>
+
+                        <div class="widget-toolbar">
+														<span class="label label-success">
+															<i class="ace-icon fa fa-arrow-up"></i>
+														</span>
+                            <span class="badge badge-info">info</span>
+
+                        </div>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main padding-6">
+                            <div class="alert alert-info">
+
+                                <table>
+                                    <tr><td align="left">220V</td><td rowspan="4" align="right">
+
+    <h1> <i class="ace-icon fa fa-battery-half">
+
+
+                                        </i></h1>
+                                    </td></tr>
+                                    <tr><td>1.1Ar</td></tr>
+                                    <tr><td>0.22Kw</td></tr>
+                                    <tr><td>346.7Kwh</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-6">
+                <div class="widget-box widget-color-purple light-border" id="widget-box-6">
+                    <div class="widget-header">
+                        <h5 class="widget-title smaller" ng-click="changPath('deviceID')">Battery 2</h5>
+
+                        <div class="widget-toolbar">
+						<span class="label label-primary">
+															<i class="ace-icon fa fa-arrow-down"></i>
+														</span>
+                            <span class="badge badge-success">ON</span>
+                        </div>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main padding-6">
+                            <div class="alert alert-info">
+                                <table>
+                                    <tr><td>Energy</td><td>47678</td></tr>
+                                    <tr><td>Power</td><td>440</td></tr>
+                                    <tr><td>Current</td><td>2</td></tr>
+                                    <tr><td>Voltage</td><td>220</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-7">
+                <div class="widget-box widget-color-blue3 light-border" id="widget-box-7">
+                    <div class="widget-header">
+                        <h5 class="widget-title smaller" ng-click="changPath('deviceID')">PV 1</h5>
+
+                        <div class="widget-toolbar">
+														<span class="label label-warning">
+															<i class="ace-icon fa fa-ban"></i>
+														</span>
+                            <span class="badge badge-danger">OFF</span>
+
+                        </div>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main padding-6">
+                            <div class="alert alert-info">
+                                <table>
+                                    <tr><td>Energy</td><td>47678</td></tr>
+                                    <tr><td>Power</td><td>440</td></tr>
+                                    <tr><td>Current</td><td>2</td></tr>
+                                    <tr><td>Voltage</td><td>220</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-8">
+                <div class="widget-box widget-color-blue3 light-border" id="widget-box-8">
+                    <div class="widget-header">
+                        <h5 class="widget-title smaller" ng-click="changPath('deviceID')">PV 2</h5>
+
+                        <div class="widget-toolbar">
+						<span class="label label-primary">
+															<i class="ace-icon fa fa-arrow-down"></i>
+														</span>
+                            <span class="badge badge-success">ON</span>
+                        </div>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main padding-6">
+                            <div class="alert alert-info">
+                                <table>
+                                    <tr><td>Energy</td><td>47678</td></tr>
+                                    <tr><td>Power</td><td>440</td></tr>
+                                    <tr><td>Current</td><td>2</td></tr>
+                                    <tr><td>Voltage</td><td>220</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-9">
+                <div class="widget-box widget-color-red light-border" id="widget-box-9">
+                    <div class="widget-header">
+                        <h5 class="widget-title smaller" ng-click="changPath('deviceID')">
+                                DC Source 1
+                            </h5>
+
+                        <div class="widget-toolbar">
+														<span class="label label-success">
+															<i class="ace-icon fa fa-arrow-up"></i>
+														</span>
+                            <span class="badge badge-info">info</span>
+
+                        </div>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main padding-6">
+                            <div class="alert alert-info">
+                                <table>
+                                    <tr><td>Energy</td><td>47678</td></tr>
+                                    <tr><td>Power</td><td>440</td></tr>
+                                    <tr><td>Current</td><td>2</td></tr>
+                                    <tr><td>Voltage</td><td>220</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-10">
+                <div class="widget-box widget-color-grey light-border" id="widget-box-10">
+                    <div class="widget-header">
+                        <h5 class="widget-title smaller" ng-click="changPath('deviceID')">DC Load 1</h5>
+
+                        <div class="widget-toolbar">
+						<span class="label label-primary">
+															<i class="ace-icon fa fa-arrow-down"></i>
+														</span>
+                            <span class="badge badge-success">ON</span>
+                        </div>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main padding-6">
+                            <div class="alert alert-info ">
+                                           <table>
+                                                <tr><td>Energy</td><td>47678</td></tr>
+                                                <tr><td>Power</td><td>440</td></tr>
+                                                <tr><td>Current</td><td>2</td></tr>
+                                                <tr><td>Voltage</td><td>220</td></tr>
+                                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+
+	</div>
+
+	<div class="space"></div>
+
+<hr />
+
+    <!-- BIC -->
+	<div class="page-header">
+		<h1> <i class="ace-icon fa fa-superpowers blue"></i> Bi-directional Converters</h1>
+	</div>
+	<div ng-show="contentLoaded" jq-sortable options="sortableOpts" connect-with="'.widget-container-col'" target="'.widget-container-col'" save="true">
+
+        <div class="bic-grid">
+
+
+            <div class="row">
+
+
+
+                <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-5">
+                    <div class="widget-box widget-color-red light-border" id="widget-box-5">
+                        <div class="widget-header">
+                            <h5 class="widget-title smaller" ng-click="changPath('deviceID')">AC Source 2</h5>
+
+                            <div class="widget-toolbar">
+														<span class="label label-success">
+															<i class="ace-icon fa fa-arrow-up"></i>
+														</span>
+                                <span class="badge badge-info">info</span>
+
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main padding-6">
+                                <div class="alert alert-info">
+
+                                    <table>
+                                        <tr><td align="left">220V</td><td rowspan="4" align="right">
+
+                                        </td></tr>
+                                        <tr><td>1.1Ar</td></tr>
+                                        <tr><td>0.22Kw</td></tr>
+                                        <tr><td>346.7Kwh</td></tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-5">
+                    <div class="widget-box widget-color-grey light-border" id="widget-box-5">
+                        <div class="widget-header">
+                            <h5 class="widget-title smaller" ng-click="changPath('deviceID')">AC Load 2</h5>
+
+                            <div class="widget-toolbar">
+														<span class="label label-success">
+															<i class="ace-icon fa fa-arrow-up"></i>
+														</span>
+                                <span class="badge badge-info">info</span>
+
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main padding-6">
+                                <div class="alert alert-info">
+
+                                    <table>
+                                        <tr><td align="left">220V</td><td rowspan="4" align="right">
+                                        </td></tr>
+                                        <tr><td>1.1Ar</td></tr>
+                                        <tr><td>0.22Kw</td></tr>
+                                        <tr><td>346.7Kwh</td></tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+      </div>
+		<div class="space"></div>
+
+		<hr />
+
+
+
+            <div class="page-header">
+                <h1> <i class="ace-icon fa fa-superpowers blue"></i> AC Grid 100/200V</h1>
+            </div>
+            <div ng-show="contentLoaded" jq-sortable options="sortableOpts" connect-with="'.widget-container-col'" target="'.widget-container-col'" save="true">
+
+                <div class="ac-grid">
+
+
+                    <div class="row">
+
+
+
+                        <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-5">
+                            <div class="widget-box widget-color-red light-border" id="widget-box-5">
+                                <div class="widget-header">
+                                    <h5 class="widget-title smaller" ng-click="changPath('deviceID')">AC Source 1</h5>
+
+                                    <div class="widget-toolbar">
+														<span class="label label-success">
+															<i class="ace-icon fa fa-arrow-up"></i>
+														</span>
+                                        <span class="badge badge-info">info</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main padding-6">
+                                        <div class="alert alert-info">
+
+                                            <table>
+                                                <tr><td align="left">220V</td><td rowspan="4" align="right">
+                                                </td></tr>
+                                                <tr><td>1.1Ar</td></tr>
+                                                <tr><td>0.22Kw</td></tr>
+                                                <tr><td>346.7Kwh</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-5">
+                            <div class="widget-box widget-color-red light-border" id="widget-box-5">
+                                <div class="widget-header">
+                                    <h5 class="widget-title smaller" ng-click="changPath('deviceID')">AC Source 2</h5>
+
+                                    <div class="widget-toolbar">
+														<span class="label label-success">
+															<i class="ace-icon fa fa-arrow-up"></i>
+														</span>
+                                        <span class="badge badge-info">info</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main padding-6">
+                                        <div class="alert alert-info">
+
+                                            <table>
+                                                <tr><td align="left">220V</td><td rowspan="4" align="right">
+
+                                                </td></tr>
+                                                <tr><td>1.1Ar</td></tr>
+                                                <tr><td>0.22Kw</td></tr>
+                                                <tr><td>346.7Kwh</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-5">
+                            <div class="widget-box widget-color-grey light-border" id="widget-box-5">
+                                <div class="widget-header">
+                                    <h5 class="widget-title smaller" ng-click="changPath('deviceID')">AC Load 1</h5>
+
+                                    <div class="widget-toolbar">
+														<span class="label label-success">
+															<i class="ace-icon fa fa-arrow-up"></i>
+														</span>
+                                        <span class="badge badge-info">info</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main padding-6">
+                                        <div class="alert alert-info">
+
+                                            <table>
+                                                <tr><td align="left">220V</td><td rowspan="4" align="right">
+
+                                                </td></tr>
+                                                <tr><td>1.1Ar</td></tr>
+                                                <tr><td>0.22Kw</td></tr>
+                                                <tr><td>346.7Kwh</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 widget-container-col" id="widget-container-col-5">
+                            <div class="widget-box widget-color-grey light-border" id="widget-box-5">
+                                <div class="widget-header">
+                                    <h5 class="widget-title smaller" ng-click="changPath('deviceID')">AC Load 2</h5>
+
+                                    <div class="widget-toolbar">
+														<span class="label label-success">
+															<i class="ace-icon fa fa-arrow-up"></i>
+														</span>
+                                        <span class="badge badge-info">info</span>
+
+                                    </div>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main padding-6">
+                                        <div class="alert alert-info">
+
+                                            <table>
+                                                <tr><td align="left">220V</td><td rowspan="4" align="right">
+                                                </td></tr>
+                                                <tr><td>1.1Ar</td></tr>
+                                                <tr><td>0.22Kw</td></tr>
+                                                <tr><td>346.7Kwh</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="space"></div>
+
+                <hr />
+
+
+                <div class="page-header">
+                    <h1> <i class="ace-icon fa fa-picture-o"></i> Grapics</h1>
+                </div>
+                <div ng-show="contentLoaded" jq-sortable options="sortableOpts" connect-with="'.widget-container-col'" target="'.widget-container-col'" save="true">
+
+                    <div>
+
+
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=40&txt=1200%C3%97350&w=1200&h=350">
+
+                    </div>
+
+                    <div class="space"></div>
+
+                    <hr />
+
+
+ <div class="text-center">
+	<div class="pull-left">
+		<button type="button" class="btn btn-white btn-sm btn-info" ng-click="button_reload()"><i class="fa fa-refresh"></i></button>
+		<button type="button" class="btn btn-white btn-sm btn-info" ng-click="button_fullscreen()"><i class="fa fa-arrows"></i></button>
+		<button type="button" class="btn btn-white btn-sm btn-info" ng-click="button_toggle()"><i class="fa fa-eye"></i></button>
+	</div>
+
+	<button type="reset" class="btn btn-danger btn-white btn-bold btn-round" ng-click="resetStorage()">Reset Position/State</button>
+</div>
+
+</div>
