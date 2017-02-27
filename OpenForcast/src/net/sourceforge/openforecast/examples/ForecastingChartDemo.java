@@ -99,7 +99,8 @@ public class ForecastingChartDemo extends ApplicationFrame
      */
     public XYDataset createDataset()
     {
-        TimeSeries observations
+        @SuppressWarnings("deprecation")
+		TimeSeries observations
             = new TimeSeries("Quarterly Sales", Quarter.class);
         
         observations.add(new Quarter(1,1990), 362.0);

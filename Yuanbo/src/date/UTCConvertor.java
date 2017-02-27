@@ -29,7 +29,7 @@ public class UTCConvertor {
 		
 		System.out.println(s);
 		
-		s = convertUTCtoDate(1222387200000L);
+		s = convertUTCtoDate(1487138457l*1000);
 		
 		System.out.println(s);
 		
