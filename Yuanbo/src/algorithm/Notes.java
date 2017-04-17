@@ -1,26 +1,26 @@
 package algorithm;
 
 /*
- * toCharyArray() // »ñµÃ×Ö·û´®¶ÔÓ¦µÄcharÊý×é
+ * toCharyArray() // èŽ·å¾—å­—ç¬¦ä¸²å¯¹åº”çš„charæ•°ç»„
 
- Arrays.sort()  // Êý×éÅÅÐò
+ Arrays.sort()  // æ•°ç»„æŽ’åº
 
- Arrays.toString(char[] a) // Êý×é×ª³É×Ö·û´®
+ Arrays.toString(char[] a) // æ•°ç»„è½¬æˆå­—ç¬¦ä¸²
 
- charAt(int x) // »ñµÃÄ³¸öË÷Òý´¦µÄ×Ö·û
+ charAt(int x) // èŽ·å¾—æŸä¸ªç´¢å¼•å¤„çš„å­—ç¬¦
 
- length() // ×Ö·û´®³¤¶È
+ length() // å­—ç¬¦ä¸²é•¿åº¦
 
- length // Êý×é´óÐ¡
+ length // æ•°ç»„å¤§å°
  */
 
 /**
- * Á´±í ½Úµã
+ * é“¾è¡¨ èŠ‚ç‚¹
  * 
  * @description
  * @version currentVersion(1.0)
  * @author Rambo
- * @createtime 2013Äê12ÔÂ3ÈÕ ÏÂÎç3:43:51
+ * @createtime 2013å¹´12æœˆ3æ—¥ ä¸‹åˆ3:43:51
  */
 class Node {
 
@@ -136,11 +136,12 @@ class TreeNode {
 }
 
 /*
- * ÏÂÃæÊÇÓëÊ÷Ïà¹ØµÄÒ»Ð©¸ÅÄî£º
+ * ä¸‹é¢æ˜¯ä¸Žæ ‘ç›¸å…³çš„ä¸€äº›æ¦‚å¿µï¼š
  * 
- * Æ½ºâ vs. ·ÇÆ½ºâ£ºÆ½ºâ¶þ²æÊ÷ÖÐ£¬Ã¿¸ö½ÚµãµÄ×óÓÒ×ÓÊ÷µÄÉî¶ÈÏà²îÖÁ¶àÎª1£¨1»ò0£©¡£ Âú¶þ²æÊ÷£¨Full Binary
- * Tree£©£º³ýÒ¶×Ó½ÚµãÒÔÎªµÄÃ¿¸ö½Úµã¶¼ÓÐÁ½¸öº¢×Ó¡£ ÍêÃÀ¶þ²æÊ÷£¨Perfect Binary
- * Tree£©£ºÊÇ¾ßÓÐÏÂÁÐÐÔÖÊµÄÂú¶þ²æÊ÷£ºËùÓÐµÄÒ¶×Ó½Úµã¶¼ÓÐÏàÍ¬µÄÉî¶È»ò´¦ÔÚÍ¬Ò»²ã´Î£¬ÇÒÃ¿¸ö¸¸½Úµã¶¼±ØÐëÓÐÁ½¸öº¢×Ó¡£ ÍêÈ«¶þ²æÊ÷£¨Complete
- * Binary Tree£©£º¶þ²æÊ÷ÖÐ£¬¿ÉÄÜ³ýÁË×îºóÒ»¸ö£¬Ã¿Ò»²ã¶¼±»ÍêÈ«ÌîÂú£¬ÇÒËùÓÐ½Úµã¶¼±ØÐë¾¡¿ÉÄÜÏë×ó¿¿¡£
+ * å¹³è¡¡ vs. éžå¹³è¡¡ï¼šå¹³è¡¡äºŒå‰æ ‘ä¸­ï¼Œæ¯ä¸ªèŠ‚ç‚¹çš„å·¦å³å­æ ‘çš„æ·±åº¦ç›¸å·®è‡³å¤šä¸º1ï¼ˆ1æˆ–0ï¼‰ã€‚ æ»¡äºŒå‰æ ‘ï¼ˆFull Binary
+ * Treeï¼‰ï¼šé™¤å¶å­èŠ‚ç‚¹ä»¥ä¸ºçš„æ¯ä¸ªèŠ‚ç‚¹éƒ½æœ‰ä¸¤ä¸ªå­©å­ã€‚ å®Œç¾ŽäºŒå‰æ ‘ï¼ˆPerfect Binary
+ * Treeï¼‰ï¼šæ˜¯å…·æœ‰ä¸‹åˆ—æ€§è´¨çš„æ»¡äºŒå‰æ ‘ï¼šæ‰€æœ‰çš„å¶å­èŠ‚ç‚¹éƒ½æœ‰ç›¸åŒçš„æ·±åº¦æˆ–å¤„åœ¨åŒä¸€å±‚æ¬¡ï¼Œä¸”æ¯ä¸ªçˆ¶èŠ‚ç‚¹éƒ½å¿…é¡»æœ‰ä¸¤ä¸ªå­©å­ã€‚ å®Œå…¨äºŒå‰æ ‘ï¼ˆComplete
+ * Binary Treeï¼‰ï¼šäºŒå‰æ ‘ä¸­ï¼Œå¯èƒ½é™¤äº†æœ€åŽä¸€ä¸ªï¼Œæ¯ä¸€å±‚éƒ½è¢«å®Œå…¨å¡«æ»¡ï¼Œä¸”æ‰€æœ‰èŠ‚ç‚¹éƒ½å¿…é¡»å°½å¯èƒ½æƒ³å·¦é ã€‚
+ * 
  */
 

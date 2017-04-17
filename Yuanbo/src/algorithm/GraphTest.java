@@ -1,11 +1,11 @@
 package algorithm;
 
-/*4. Í¼
-Í¼Ïà¹ØµÄÎÊÌâÖ÷Òª¼¯ÖĞÔÚÉî¶ÈÓÅÏÈËÑË÷£¨depth first search£©ºÍ¹ã¶ÈÓÅÏÈËÑË÷£¨breath first search£©¡£
+/*4. å›¾
+å›¾ç›¸å…³çš„é—®é¢˜ä¸»è¦é›†ä¸­åœ¨æ·±åº¦ä¼˜å…ˆæœç´¢ï¼ˆdepth first searchï¼‰å’Œå¹¿åº¦ä¼˜å…ˆæœç´¢ï¼ˆbreath first searchï¼‰ã€‚
 
-ÏÂÃæÊÇÒ»¸ö¼òµ¥µÄÍ¼¹ã¶ÈÓÅÏÈËÑË÷µÄÊµÏÖ¡£
+ä¸‹é¢æ˜¯ä¸€ä¸ªç®€å•çš„å›¾å¹¿åº¦ä¼˜å…ˆæœç´¢çš„å®ç°ã€‚
 
-1) ¶¨ÒåGraphNode*/
+1) å®šä¹‰GraphNode*/
 
 class GraphNode{ 
 
@@ -40,7 +40,7 @@ class GraphNode{
 
     }
 }
-//2) ¶¨ÒåÒ»¸ö¶ÓÁĞQueue
+//2) å®šä¹‰ä¸€ä¸ªé˜Ÿåˆ—Queue
 
 
 class GraphQueue{
@@ -86,7 +86,7 @@ class GraphQueue{
     }
 }
 
-//2) ¶¨ÒåÒ»¸öStack
+//2) å®šä¹‰ä¸€ä¸ªStack
 class GraphStack{
 	GraphNode top;
 	
@@ -104,7 +104,6 @@ class GraphStack{
 	    }
 	 GraphNode pop(){
 		  if(top != null){
-
 			  GraphNode temp = new GraphNode(top.val, top.neighbors);
 			  top = top.next;
 	          return temp;
@@ -118,12 +117,10 @@ class GraphStack{
 	        	node.next = top;
 	        	top = node;
 	       }
-	 		
 	}
 }
 
-
-//3) ÓÃ¶ÓÁĞQueueÊµÏÖ¹ã¶ÈÓÅÏÈËÑË÷
+//3) ç”¨é˜Ÿåˆ—Queueå®ç°å¹¿åº¦ä¼˜å…ˆæœç´¢
 
 public class GraphTest {
  
@@ -152,18 +149,18 @@ public class GraphTest {
         n5.neighbors = new GraphNode[]{n1,n3,n4};
  
 
-//      breathFirstSearch(n1, 5);
-
+//      breathFirstSearch(n1, 4);
+System.out.println();
         deepFirstSearch(n1, 5);
     }
 
-    // DEEP FIRST  µİ¹éÊµÏÖÉî¶ÈÓÅÏÈ
+    // DEEP FIRST  é€’å½’å®ç°æ·±åº¦ä¼˜å…ˆ
     public static void deepFirstSearch(GraphNode root, int x){
     	 if(root.val == x)
              System.out.println("find in root");
          
          root.visited = true;
-                  
+     
          if(root != null){
         	 GraphNode c = root;
         	    for(GraphNode n: c.neighbors){
@@ -188,13 +185,14 @@ public class GraphTest {
 
         if(root.val == x)
 
-            System.out.println("find in root");
+            System.out.println("find in root" + root);
  
 
         GraphQueue queue = new GraphQueue();
 
         root.visited = true;
 
+        System.out.print(root + " ");
         queue.enqueue(root);
  
 
@@ -212,15 +210,11 @@ public class GraphTest {
                     n.visited = true;
 
                     if(n.val == x){
-
                         System.out.println("Find "+n);
-
                     }
                     queue.enqueue(n);
                 }
-
             }
-
         }
 
     }

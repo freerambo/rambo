@@ -7,12 +7,12 @@ public class Recursive {
 	}
 
 
-	/*5. ����
-	�����ǲ�ͬ�����㷨��ʱ�临�Ӷȣ������ȥwiki��һ����Щ�㷨�Ļ���˼�롣
+	/*5. 排序
+	下面是不同排序算法的时间复杂度，你可以去wiki看一下这些算法的基本思想。
 
 	Algorithm	Average Time	Worst Time	Space
-	ð������	n^2	n^2	1
-	ѡ������	n^2	n^2	1
+	冒泡排序	n^2	n^2	1
+	选择排序	n^2	n^2	1
 	Counting Sort	n+k	n+k	n+k
 	Insertion sort	n^2	n^2	 
 	Quick sort	n log(n)	n^2	 
@@ -20,16 +20,16 @@ public class Recursive {
 	*/
 
 
-	/*6. �ݹ� vs. ����
-	�Գ���Ա��˵���ݹ�Ӧ����һ������������˼�루a built-in thought��������ͨ��һ���򵥵�������˵����
+	/*6. 递归 vs. 迭代
+	对程序员来说，递归应该是一个与生俱来的思想（a built-in thought），可以通过一个简单的例子来说明。
 
-	���⣺ ��n��̨�ף�һ��ֻ����1����2�������ж������߷���
+	问题： 有n步台阶，一次只能上1步或2步，共有多少种走法。
 
-	����1:�ҵ�����ǰn��̨�׺�ǰn-1��̨��֮��Ĺ�ϵ��
+	步骤1:找到走完前n步台阶和前n-1步台阶之间的关系。
 
-	Ϊ������n��̨�ף�ֻ�����ַ�������n-1��̨����1���ߵ����n-2��̨�״���2���ߵ������f(n)��������n��̨�׵ķ���������ôf(n) = f(n-1) + f(n-2)��
+	为了走完n步台阶，只有两种方法：从n-1步台阶爬1步走到或从n-2步台阶处爬2步走到。如果f(n)是爬到第n步台阶的方法数，那么f(n) = f(n-1) + f(n-2)。
 
-	����2: ȷ����ʼ��������ȷ�ġ�
+	步骤2: 确保开始条件是正确的。
 
 	f(0) = 0;
 	f(1) = 1;*/
@@ -42,7 +42,7 @@ public class Recursive {
 
 	    return x;
 	} 
-/*	�ݹ鷽����ʱ�临�Ӷ���n��ָ��������Ϊ�кܶ�����ļ��㣬���£�
+/*	递归方法的时间复杂度是n的指数级，因为有很多冗余的计算，如下：
 
 	f(5)
 	f(4) + f(3)
@@ -50,7 +50,7 @@ public class Recursive {
 	f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1)
 	f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1)*/
 
-//	ֱ�ӵ��뷨�ǽ��ݹ�ת��Ϊ������
+//	直接的想法是将递归转换为迭代：
 	public static int fno(int n) {
 		 
 
@@ -79,15 +79,15 @@ public class Recursive {
 
 	    return third;
 	}
-//	��������Ӷ��ԣ��������ѵ�ʱ�����
-	/*	7. ��̬�滮
-	��̬�滮�ǽ��������Щ����������ļ�����
+//	对这个例子而言，迭代花费的时间更少
+	/*	7. 动态规划
+	动态规划是解决下面这些性质类问题的技术：
 
-	һ���������ͨ����С������Ľ�������������
-	��Щ������Ľ������Ҫ�����Ρ�
-	������Ľ�洢��һ�ű��������ÿ��������ֻ�ü���һ�Ρ�
-	��Ҫ����Ŀռ��Խ�ʡʱ�䡣
-	��̨��������ȫ����������������ʣ���˿����ö�̬�滮���������*/
+	一个问题可以通过更小子问题的解决方法来解决。
+	有些子问题的解可能需要计算多次。
+	子问题的解存储在一张表格里，这样每个子问题只用计算一次。
+	需要额外的空间以节省时间。
+	爬台阶问题完全符合上面的四条性质，因此可以用动态规划法来解决。*/
 	
 	public static int[] A = new int[100];
 	 
@@ -111,12 +111,12 @@ public class Recursive {
 	}
 
 	
-/*	8. λ����
-	λ��������
+/*	8. 位操作
+	位操作符：
 
 	OR (|)	AND (&)	XOR (^)	Left Shift (<<)	Right Shift (>>)	Not (~)
 	1|0=1	1&0=0	1^0=1	0010<<2=1000	1100>>2=0011	~1=0
-	��ø�������n�ĵ�iλ��(i��0���������ұ߿�ʼ)*/
+	获得给定数字n的第i位：(i从0计数并从右边开始)*/
 	public static boolean getBit(int num, int i){
 
 	    int result = num & (1<<i);
@@ -134,19 +134,19 @@ public class Recursive {
 	}
 
 	
-	/*	���磬�������10�ĵ�2λ��
+	/*	例如，获得数字10的第2位：
 
 	i=1, n=10
 	1<<1= 10
 	1010&10=10
 	10 is not 0, so return true;
 
-	9. ��������
-	���������ص�����ͨ����Ҫ�ܺõĹ滮�˽����⣨formatting the problem��������պ���һ����������ļ����ӣ�
+	9. 概率问题
+	解决概率相关的问题通常需要很好的规划了解问题（formatting the problem），这里刚好有一个这类问题的简单例子：
 
-	һ����������50���ˣ���ô������������������ͬ�ĸ����Ƕ��٣��������������ʵ��Ҳ����һ��365�죩
+	一个房间里有50个人，那么至少有两个人生日相同的概率是多少？（忽略闰年的事实，也就是一年365天）
 
-	�� ��ĳЩ����ĸ��ʺܶ�ʱ�򶼿���ת�����ȼ���������档�������������ǿ��Լ������������ն�������ͬ�ĸ��ʣ�Ҳ���ǣ�365/365 + 364/365 + 363/365 + 365-n/365 + 365-49/365����������������������ͬ�ĸ��ʾ���1 �C ���ֵ��
+	计 算某些事情的概率很多时候都可以转换成先计算其相对面。在这个例子里，我们可以计算所有人生日都互不相同的概率，也就是：365/365 + 364/365 + 363/365 + 365-n/365 + 365-49/365，这样至少两个人生日相同的概率就是1 – 这个值。
 */
 	
 	
@@ -168,10 +168,10 @@ public class Recursive {
 	}
 //	calculateProbability(50) = 0.97
 
-/*	10. �������
-	��Ϻ����е��������ڴ����Ƿ�ؼ���*/
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//		System.out.println(caculateProbability(50));
-//	}
+/*	10. 排列组合
+	组合和排列的区别在于次序是否关键。*/
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(caculateProbability(50));
+	}
 	}
