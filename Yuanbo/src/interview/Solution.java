@@ -6,6 +6,8 @@
  */
 package interview;
 
+import java.util.Random;
+
 /**
  * 
  * A zero-indexed array A consisting of N integers is given. An equilibrium
@@ -61,8 +63,22 @@ public class Solution {
 
 		int[] a = { 1, 2, 0, -3, 1 };
 
-		System.out.print(solution(7, 9));
+//		System.out.print(xorTest(7, 9));
+		
+		for(int i =0; i < 100; i++){
+			System.out.println(randMTorandN(17, 19));
 
+		}
+
+		
+//		double result = Math.pow(5, 6);
+//		System.out.println(result);
+
+//		System.out.println("times of N : "+ Math.round(Math.log(result-1)/Math.log(7)));
+//		double time = Math.pow(result, );
+		
+//		Math.l
+		
 		// System.out.print(equi(a,a.length));
 
 	}
@@ -80,7 +96,7 @@ public class Solution {
 	 * f(0, n) = f(1, n) = { n , n%4==0; 1 , n%4==1; n+1 , n%4==2; 0 , n%4==3; }
 	 * 
 	 */
-	public static int solution(int m, int n) {
+	public static int xorTest(int m, int n) {
 		// write your code in Java SE 8
 		if (m < 0 || n < 0)
 			return -1;
@@ -95,7 +111,7 @@ public class Solution {
 		return xorResults[(n - m) % 4];
 	}
 
-	static int equi(int arr[], int n) {
+	public static int equi(int arr[], int n) {
 		if (n == 0)
 			return -1;
 		long sum = 0;
@@ -112,5 +128,45 @@ public class Solution {
 		}
 		return -1;
 	}
+	
+	
+	public static long randMTorandN(int m, int n) {
+
+		Random r = new Random();
+		
+		int num = getM_N(m,n);
+		System.out.println("times of " + m +" is " + num);
+		long result = 0;
+		for(int i=1; i <= num; i++ ){
+			int r1 = r.nextInt(m) + 1;
+			result = result * m + r1;
+		}
+
+		
+		System.out.println("result --> " + result);
+		
+		
+		return result % n + 1;
+
+//		return (int)( Math.round(Math.log(result)/Math.log(times)));
+	}
+	
+	
+	public static int getM_N(int m, int n) {
+		if(m < 1) return -1;
+		if(m > n) return -1;
+		int i=1;
+		long powerM = m;
+		while(powerM%n > 1){
+			powerM *= m;
+			i++;
+		}
+		return i;
+	}
+	
+	public static int getTimeofN(double results, int n) {
+		return (int) Math.round(Math.log(results-1)/Math.log(n));
+	}
+
 
 }
