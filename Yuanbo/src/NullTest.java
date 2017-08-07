@@ -1,9 +1,5 @@
 public class NullTest {
     public static void main(String[] args) {
-        testNullObject();
-    }
-    
-    public static void testNullObject() {
     	int i =0;
     	Integer k =0;
 

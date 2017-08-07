@@ -16,6 +16,8 @@ public class Test {
 		String str = "javajavaibmjava";
 		String regex = "(java)+";
 		System.out.println(str.replaceAll(regex, "java"));
+		System.out.println(0X0BF3);
+
 	}
 
 }
