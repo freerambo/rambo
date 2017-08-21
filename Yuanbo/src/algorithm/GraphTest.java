@@ -168,6 +168,7 @@ System.out.println();
 
                          System.out.print(n + " ");
 
+                         	
                          n.visited = true;
 
                          if(n.val == x){

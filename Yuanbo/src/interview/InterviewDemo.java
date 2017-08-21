@@ -19,7 +19,7 @@ public class InterviewDemo {
     private static void two(){
         int i = Integer.MAX_VALUE;
         System.err.println((i+1)<i);
-        System.out.println("2. 存在一个i, 使得(i+1)<i");
+        System.out.println("2. 存在一个i, 使得(i+1)<i. i is " + i );
     }
     private static void three(){
         System.err.println("gc is not a Java Thread, it is a native thread");
