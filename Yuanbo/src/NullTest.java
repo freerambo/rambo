@@ -5,7 +5,7 @@ public class NullTest {
 
 //    	 System.out.println(i == null); // error! int can not be compared with null
     	System.out.println(k == null); // ok, outpu false
-    	System.out.println("ocm0vvzhw0_nsZPXKNgEUXol0OYQ".length()); 
+    	System.out.println(0x130 + "ocm0vvzhw0_nsZPXKNgEUXol0OYQ".length()); 
     	System.out.println("ocm0vvzhw0_".length()); 
 
     	
