@@ -1,5 +1,9 @@
 package algorithm;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 /*
  * toCharyArray() // 获得字符串对应的char数组
 
@@ -127,12 +131,28 @@ class Queue {
 }
 
 class TreeNode {
-
 	int value;
-
 	TreeNode left;
-
 	TreeNode right;
+
+	public List<List<TreeNode>> findNodeListByLevel(TreeNode root) {
+		return findLevelNodeListHelper(root, 0, new ArrayList<List<TreeNode>>());
+	}
+	/**
+	 * @function: Find nodes list for each lebel
+	 * @author: Rambo Zhu     21 Sep 2017 12:16:46 pm
+	 */
+	public List<List<TreeNode>> findLevelNodeListHelper(TreeNode root, int level, List<List<TreeNode>> lists) {
+		if (root != null) {
+			if (level >= lists.size()) {
+				lists.add(new LinkedList<TreeNode>());
+			}
+			lists.get(level).add(root);
+			findLevelNodeListHelper(root.left, level + 1, lists);
+			findLevelNodeListHelper(root.right, level + 1, lists);
+		}
+		return lists;
+	}
 }
 
 /*
@@ -140,9 +160,9 @@ class TreeNode {
  * 
  * 平衡 vs. 非平衡：平衡二叉树中，每个节点的左右子树的深度相差至多为1（1或0）。 满二叉树（Full Binary
  * Tree）：除叶子节点以为的每个节点都有两个孩子。 完美二叉树（Perfect Binary
- * Tree）：是具有下列性质的满二叉树：所有的叶子节点都有相同的深度或处在同一层次，且每个父节点都必须有两个孩子。
- * 完全二叉树（Complete
+ * Tree）：是具有下列性质的满二叉树：所有的叶子节点都有相同的深度或处在同一层次，且每个父节点都必须有两个孩子。 完全二叉树（Complete
  * Binary Tree）：二叉树中，可能除了最后一个，每一层都被完全填满，且所有节点都必须尽可能想左靠。
  * 
  */
+
 
