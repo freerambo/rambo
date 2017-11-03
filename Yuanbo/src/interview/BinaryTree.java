@@ -37,7 +37,9 @@ class Node {
 	public Node left;
 	public Node right;
 	public int data;
-
+	public Node next;
+	Node() {
+	}
 	Node(int newData) {
 		left = null;
 		right = null;
