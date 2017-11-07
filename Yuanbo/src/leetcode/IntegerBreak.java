@@ -23,7 +23,7 @@ public class IntegerBreak {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int i = new IntegerBreak().breakInteger(3);
+		int i = new IntegerBreak().breakInteger(10);
 		System.out.println(i);
 		
 	}

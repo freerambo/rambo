@@ -39,7 +39,11 @@ public class IntegerReplacement {
 		// TODO Auto-generated method stub
 		
 		out.println(Integer.bitCount(7));
-//		out.print(integerReplacement2(100000000));
+		out.println(integerReplacement2(100000));
+		out.println(integerReplacement1(100000));
+
+		out.println(integerReplacement(100000));
+
 	
 	}
 	
@@ -56,9 +60,9 @@ public class IntegerReplacement {
     }
    
    
-   static int a[] = new int[100];
+  
    public static int integerReplacement1(int n) {
-        
+	   int a[] = new int[n+1];
 	   if (n == 1) return 0;
    	if (n == 2) return 1;
    	if (n == 3) return 2;
