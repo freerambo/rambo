@@ -13,7 +13,7 @@ package Hex2Int;
  * @version v 1.0 
  * Create:  14 Jul 2017 4:21:34 pm
  */
-public class java {
+public class Hex2Int {
 
 	/**
 	 * @function:
