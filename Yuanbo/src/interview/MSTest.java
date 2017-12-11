@@ -3,6 +3,13 @@ package interview;
 
 
 public class MSTest {
+	
+	static class Node{
+		public int data;
+		public Node next;
+		Node(){}
+		Node(int val){this.data = val;}
+	}
 	/** 
 	 * Time Complexity O(n) Space complexity O(1)
 	 * DENOTES: do not use recursion. 
@@ -57,5 +64,5 @@ public class MSTest {
 			n = n.next;
 		}
 		
-    } // expected output: 1	2	3	4	5	7	7	8	9 
+    } // expected output: 1	2	4	7	8	9	 
 }
