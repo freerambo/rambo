@@ -31,7 +31,10 @@ public class NewFeatures {
 //		threadRun();
 //		iterator();
 //		map();
-		list();
+//		list();
+		
+		stats();
+		
 	}
 	/**
 	 *  
@@ -48,15 +51,6 @@ public class NewFeatures {
 		//Java 8 way: 
 		new Thread(() -> System.out.println("In Java8, Lambda expression rocks !!") ).start();
 
-		
-		new Thread(new Runnable(){
-			@Override
-			public void run(){
-				System.out.println("Before java 8, too much code for too little to do");
-			}
-		});
-		
-		new Thread(() -> System.out.println("java 8 new feature!!")).start();
 	}
 	
 	/**
@@ -111,7 +105,6 @@ public class NewFeatures {
 		String cs = G7.stream().map(s -> s.toUpperCase()).reduce((sum, s) -> sum + "-" + s ).get(); 
 		System.out.println(cs);
 
-
 	}
 	
 	/**
@@ -123,7 +116,7 @@ public class NewFeatures {
 		List<Integer> primes = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29); 
 
 		
-		IntSummaryStatistics stats  = primes.stream().mapToInt(x -> x.intValue()).summaryStatistics();
+		IntSummaryStatistics stats  = primes.parallelStream().mapToInt(x -> x.intValue()).summaryStatistics();
 		
 		
 		System.out.println("getAverage " + stats.getAverage());
