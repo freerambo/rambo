@@ -1,5 +1,6 @@
 package nio;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
@@ -72,7 +73,20 @@ public class MyFile<Path> extends SimpleFileVisitor<Path>{
 	}
 	
 	public static void main(String[] args) {
-		showAllFile();
+//		showAllFile();
+		
+//		List<String> results = new ArrayList<String>();
+
+
+		File[] files = new File("/Users/yuzhu/git/cbp/cbp-parent/cbp-integration").listFiles();
+		//If this pathname does not denote a directory, then listFiles() returns null. 
+
+		for (File file : files) {
+		    if (file.isDirectory()) {
+		        System.out.println(file.getName());
+
+		    }
+		}
 	}
 		
 }
