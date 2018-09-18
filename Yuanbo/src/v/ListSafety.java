@@ -1,6 +1,7 @@
 package v;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -9,6 +10,9 @@ public class ListSafety {
 	
 	
 	public static void main(String[] args) {
+		
+		Date d = new Date();
+		System.out.println(d.getTime());
 		List<String> ls = new ArrayList<String>();
 		ls.add("1");
 		ls.add("2");
