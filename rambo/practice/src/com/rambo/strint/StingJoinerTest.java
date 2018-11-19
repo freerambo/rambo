@@ -1,4 +1,4 @@
-package com.rambo;
+package com.rambo.strint;
 
 import java.util.StringJoiner;
 
