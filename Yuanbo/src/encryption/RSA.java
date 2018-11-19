@@ -1,10 +1,16 @@
 package encryption;
 
 import javax.crypto.Cipher;
+
+import org.bouncycastle.util.Strings;
+
+import sun.awt.CharsetString;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.security.KeyFactory;
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -13,11 +19,12 @@ import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 import java.util.Map;
 
-
 public class RSA {
-	
+
 	public static String ALGORITHM = "RSA";
-	public static String SIGN_ALGORITHMS = "SHA1WithRSA";// hash encryption algorithm for signature
+	public static String SIGN_ALGORITHMS = "SHA1WithRSA";// hash encryption
+															// algorithm for
+															// signature
 	public static String CHAR_SET = "UTF-8";
 
 	/**
@@ -29,12 +36,10 @@ public class RSA {
 	 */
 	public static String sign(String content, String privateKey) {
 		try {
-			PKCS8EncodedKeySpec priPKCS8 = new PKCS8EncodedKeySpec(
-					Base64.getDecoder().decode(privateKey));
+			PKCS8EncodedKeySpec priPKCS8 = new PKCS8EncodedKeySpec(Base64.getDecoder().decode(privateKey));
 			KeyFactory keyf = KeyFactory.getInstance("RSA");
 			PrivateKey priKey = keyf.generatePrivate(priPKCS8);
-			java.security.Signature signature = java.security.Signature
-					.getInstance(SIGN_ALGORITHMS);
+			java.security.Signature signature = java.security.Signature.getInstance(SIGN_ALGORITHMS);
 			signature.initSign(priKey);
 			signature.update(content.getBytes(CHAR_SET));
 			byte[] signed = signature.sign();
@@ -53,15 +58,12 @@ public class RSA {
 	 * @param public_key
 	 * @return
 	 */
-	public static boolean verify(String content, String sign,
-			String public_key) {
+	public static boolean verify(String content, String sign, String public_key) {
 		try {
 			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 			byte[] encodedKey = Base64.getDecoder().decode(public_key);
-			PublicKey pubKey = keyFactory
-					.generatePublic(new X509EncodedKeySpec(encodedKey));
-			java.security.Signature signature = java.security.Signature
-					.getInstance(SIGN_ALGORITHMS);
+			PublicKey pubKey = keyFactory.generatePublic(new X509EncodedKeySpec(encodedKey));
+			java.security.Signature signature = java.security.Signature.getInstance(SIGN_ALGORITHMS);
 			signature.initVerify(pubKey);
 			signature.update(content.getBytes(CHAR_SET));
 			boolean bverify = signature.verify(Base64.getDecoder().decode(sign));
@@ -74,10 +76,12 @@ public class RSA {
 	}
 
 	/**
-	 * Decrypt with public key 
+	 * Decrypt with public key
 	 *
-	 * @param content to be decrpted
-	 * @param pk public key 
+	 * @param content
+	 *            to be decrpted
+	 * @param pk
+	 *            public key
 	 * @return decrypted data
 	 */
 	protected static byte[] decryptByPublicKey(String content, PublicKey pk) {
@@ -158,7 +162,7 @@ public class RSA {
 	 * encrypt By PrivateKey
 	 *
 	 * @param content
-	 * @param privateKey 
+	 * @param privateKey
 	 * @return
 	 */
 	public static String encrypt(String content, String privateKey) {
@@ -176,25 +180,27 @@ public class RSA {
 
 	/**
 	 * get Private Key
-	 * @param privateKey decoded by base64
+	 * 
+	 * @param privateKey
+	 *            decoded by base64
 	 * @throws Exception
 	 */
-	public static PrivateKey getPrivateKey(String privateKey)  {
+	public static PrivateKey getPrivateKey(String privateKey) {
 		try {
 			byte[] keyBytes = Base64.getDecoder().decode(privateKey);
 			PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes);
 			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 			PrivateKey privatekey = keyFactory.generatePrivate(keySpec);
 			return privatekey;
-		}catch(Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-
 	/**
 	 * getPublicKey
+	 * 
 	 * @param publicKey
 	 * @throws Exception
 	 */
@@ -213,33 +219,82 @@ public class RSA {
 		return null;
 
 	}
-	
-	public static void main(String[] args) {
-		
-		// generate the RSA key pair 
-		Map<String,String> keyPair = RSAKeyGenerateUtil.genKey();
+
+	public static byte[] encryptByPubKey(String publicKey, byte[] inputData) throws Exception {
+
+		PublicKey key = getPublicKey(publicKey);
+		Cipher cipher = Cipher.getInstance(ALGORITHM);
+		cipher.init(Cipher.PUBLIC_KEY, key);
+
+		byte[] encryptedBytes = cipher.doFinal(inputData);
+
+		return encryptedBytes;
+	}
+
+	public static byte[] decryptByPriKey(String privateKey, byte[] inputData) throws Exception {
+		// KeyFactory.getInstance(ALGORITHM).generatePrivate(new
+		// PKCS8EncodedKeySpec(privateKey));
+		PrivateKey key = getPrivateKey(privateKey);
+		Cipher cipher = Cipher.getInstance(ALGORITHM);
+		cipher.init(Cipher.PRIVATE_KEY, key);
+
+		byte[] decryptedBytes = cipher.doFinal(inputData);
+
+		return decryptedBytes;
+	}
+
+	public static void testPubEncPriDec() {
+
+		Map<String, String> keyPair = RSAKeyGenerateUtil.genKey();
 		String privateKey = keyPair.get(RSAKeyGenerateUtil.PRIVATE_KEY);
 		String publicKey = keyPair.get(RSAKeyGenerateUtil.PUBLIC_KEY);
 
-		// prepare data to be encrpted 
+		String content = "Hello Visa!";
+		try {
+			System.out.println("raw data: " + content);
+			byte[] encryptedData = encryptByPubKey(publicKey, content.getBytes());
+			System.out.println("encryptedData with public key: " + Base64.getEncoder().encodeToString(encryptedData));
+			byte[] decryptedData = decryptByPriKey(privateKey, encryptedData);
+			System.out.println("decryptedData with private key: " + new String(decryptedData));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void testVerify() {
+
+		// generate the RSA key pair
+		Map<String, String> keyPair = RSAKeyGenerateUtil.genKey();
+		String privateKey = keyPair.get(RSAKeyGenerateUtil.PRIVATE_KEY);
+		String publicKey = keyPair.get(RSAKeyGenerateUtil.PUBLIC_KEY);
+
+		// prepare data to be encrpted
 		String data = "abcd";
 		System.out.println("\nOriginal data -->" + data);
-		
+
 		// encrypt the data with publicKey
-		String encrypt = encrypt(data,privateKey);
+		String encrypt = encrypt(data, privateKey);
 		System.out.println("Encrypted data by privatekey-->" + encrypt);
-		
+
 		// sign the data with privateKey
 		String sign = sign(data, privateKey);
 		System.out.println("Sign by privatekey -->" + sign);
-		
+
 		// Decrypt the data with publicKey
-		String decrypt = decrypt(encrypt,publicKey);
+		String decrypt = decrypt(encrypt, publicKey);
 		System.out.println("Decrypted data by publickey-->" + decrypt);
-		
+
 		// verify the signature
 		System.out.println("Verify Sign by publickey-->" + verify(decrypt, sign, publicKey));
+
+	}
+
+	public static void main(String[] args) {
 		
+		
+		testPubEncPriDec();
+
+		// testVerify();
 	}
 
 }
