@@ -19,5 +19,8 @@ public class NullTest {
         }
         Object obj = (Object)null;
         System.out.println("9d377b10ce778c4938b3c7e2c63a229a".length());
+        EnumTest value = EnumTest.fromValue("DEVICE_ROOT");
+        System.out.println(value.name());
+
     }
 }
