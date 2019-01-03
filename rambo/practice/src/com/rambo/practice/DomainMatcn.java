@@ -11,32 +11,32 @@ import java.util.regex.Pattern;
 public class DomainMatcn {
 
 
-    public static String VISA_DOMAIN = "^(http:|https:|)[/][/]([^/]+[.])*visa.com(?::([0-9]{0,5}))?(/.*)?$";
+    public static String DEMO_DOMAIN = "^(http:|https:|)[/][/]([^/]+[.])*demo.com(?::([0-9]{0,5}))?(/.*)?$";
 
 
     public static void main(String[] args) {
 
 //        testIsMatch();
-        getHostname("https://sl73cbpapd001.visa.com:8443/vtsercs-api/vtsercs");
+        getHostname("https://dsds.demo.com:8443/-api/df");
 
     }
 
     private static void testIsMatch() {
         String text[] = {
-                "http://visa.com",
-                "http://www.visa.com",
-                "https://visa.com",
-                "http://1.2.3.visa.com/123",
-                "https://visa.com/123",
-                "https://visa.com/123/123",
-                "http://visa.com:8887", //true
-                "https://sl73cbpapd001.visa.com:8443/vtsercs-api/vtsercs",
-                "http://1visa.com/123", //false
-                "http://1visa.com.123/123" //false
+                "http://demo.com",
+                "http://www.demo.com",
+                "https://demo.com",
+                "http://1.2.3.demo.com/123",
+                "https://demo.com/123",
+                "https://demo.com/123/123",
+                "http://demo.com:8887", //true
+                "https://hello.demo.com:8443/fd-api/fd",
+                "http://1demo.com/123", //false
+                "http://1demo.com.123/123" //false
 
         };
         for (String s : text) {
-            System.out.println(isMatch(s, VISA_DOMAIN));
+            System.out.println(isMatch(s, DEMO_DOMAIN));
         }
     }
 
