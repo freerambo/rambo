@@ -4,9 +4,13 @@ package com.rambo.encrypt.security;
 import javax.xml.bind.DatatypeConverter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.cert.*;
+import java.security.cert.CertificateEncodingException;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.List;
 
 /**
@@ -18,8 +22,8 @@ public class ValidateKeyChain {
     public static void main(String[] args) throws CertificateException, NoSuchAlgorithmException, FileNotFoundException {
 
 //        getCertFromFile("/Users/yuzhu/Downloads/GTS1O1.crt");
-//        getCertsFromFile("/Users/yuzhu/Downloads/roots.pem");
-        getCertFromFile("/Users/yuzhu/Downloads/GSR2.crt");
+        getCertsFromFile("/Users/yuzhu/Downloads/roots.pem");
+//        getCertFromFile("/Users/yuzhu/Downloads/GSR2.crt");
 
     }
 
@@ -41,7 +45,7 @@ public class ValidateKeyChain {
         String certString = cert.toString();
         System.out.println(getThumbprint(cert));
         System.out.println("subjectDN " + cert.getSubjectDN().getName());
-        System.out.println("IssuerDN "+cert.getIssuerDN().getName());
+        System.out.println("IssuerDN " + cert.getIssuerDN().getName());
 //        System.out.println(new String(cert.getExtensionValue("2.5.29.14")));
 //cert.getNonCriticalExtensionOIDs().forEach(System.out::println);
         System.out.println(DatatypeConverter.printBase64Binary(cert.getEncoded()).replaceAll("(.{64})", "$1\n"));
@@ -54,14 +58,16 @@ public class ValidateKeyChain {
         List<X509Certificate> certs = (List<X509Certificate>) cf.generateCertificates(new FileInputStream(path));
 
         certs.forEach(cert -> {
-            try {
-                System.out.println(DatatypeConverter.printBase64Binary(cert.getEncoded()).replaceAll("(.{64})", "$1\n"));
-                System.out.println("subjectDN " + cert.getSubjectDN().getName());
-                System.out.println("IssuerDN "+cert.getIssuerDN().getName());
-            } catch (CertificateEncodingException e) {
-                e.printStackTrace();
-            }
-        }
-);
+                    try {
+                        System.out.println(DatatypeConverter.printBase64Binary(cert.getEncoded()).replaceAll("(.{64})", "$1\n"));
+                        System.out.println("subjectDN " + cert.getSubjectDN().getName());
+                        System.out.println("IssuerDN " + cert.getIssuerDN().getName());
+                        BigInteger serialNum = cert.getSerialNumber();
+                        System.out.println(serialNum);
+                    } catch (CertificateEncodingException e) {
+                        e.printStackTrace();
+                    }
+                }
+        );
     }
 }
