@@ -2,15 +2,12 @@ package encryption;
 
 import javax.crypto.Cipher;
 
-import org.bouncycastle.util.Strings;
 
-import sun.awt.CharsetString;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
 import java.security.KeyFactory;
 import java.security.PrivateKey;
 import java.security.PublicKey;

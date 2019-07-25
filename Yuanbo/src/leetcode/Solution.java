@@ -9,7 +9,6 @@ package leetcode;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.junit.Test;
 
 /**
  * function description：
@@ -279,7 +278,6 @@ Example2: x = -123, return -321
 		        return max;                  
 		    }
 		    
-		    @Test
 		    public void isPowerOfThree() {
 		        
 		    	int n = 3;
