@@ -1,3 +1,4 @@
+/*
 package web;
 
 
@@ -5,26 +6,30 @@ import java.io.IOException;
 
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;
-/** *//**
-* ×î¼òµ¥µÄHTTP¿Í»§¶Ë,ÓÃÀ´ÑÝÊ¾Í¨¹ýGET»òÕßPOST·½Ê½·ÃÎÊÄ³¸öÒ³Ãæ
-* @author Liudong
 */
+/** *//*
+*/
+/**
+* ï¿½ï¿½òµ¥µï¿½HTTPï¿½Í»ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Í¨ï¿½ï¿½GETï¿½ï¿½ï¿½ï¿½POSTï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Ò³ï¿½ï¿½
+* @author Liudong
+*//*
+
 public class SimpleClient{
    public static void main(String[] args) throws IOException
      {
        HttpClient client = new HttpClient();   
-       //ÉèÖÃ´úÀí·þÎñÆ÷µØÖ·ºÍ¶Ë¿Ú     
+       //ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½Í¶Ë¿ï¿½     
     //client.getHostConfiguration().setProxy("proxy_host_addr",proxy_port);
-       //Ê¹ÓÃGET·½·¨£¬Èç¹û·þÎñÆ÷ÐèÒªÍ¨¹ýHTTPSÁ¬½Ó£¬ÄÇÖ»ÐèÒª½«ÏÂÃæURLÖÐµÄhttp»»³Éhttps
+       //Ê¹ï¿½ï¿½GETï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÍ¨ï¿½ï¿½HTTPSï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½URLï¿½Ðµï¿½httpï¿½ï¿½ï¿½ï¿½https
        HttpMethod method = new GetMethod("http://java.sun.com"); 
-       //Ê¹ÓÃPOST·½·¨
+       //Ê¹ï¿½ï¿½POSTï¿½ï¿½ï¿½ï¿½
     //HttpMethod method = new PostMethod("http://java.sun.com";); 
        client.executeMethod(method);
-       //´òÓ¡·þÎñÆ÷·µ»ØµÄ×´Ì¬
+       //ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½×´Ì¬
     System.out.println(method.getStatusLine());
-      //´òÓ¡·µ»ØµÄÐÅÏ¢
+      //ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½Ï¢
     System.out.println(method.getResponseBodyAsString());
-      //ÊÍ·ÅÁ¬½Ó
+      //ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½
     method.releaseConnection();
    }
-} 
+} */

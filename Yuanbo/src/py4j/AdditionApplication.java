@@ -1,3 +1,4 @@
+/*
 package py4j;
 
 import py4j.GatewayServer;
@@ -20,4 +21,4 @@ public class AdditionApplication {
 		GatewayServer server = new GatewayServer(app); // default port is 25335
 		server.start();
 	}
-}
+}*/
