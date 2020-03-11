@@ -1,4 +1,4 @@
-package com.rambo.modules.practice;
+package workspace;
 // Java Code:
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;

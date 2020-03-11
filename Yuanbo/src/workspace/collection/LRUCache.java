@@ -18,7 +18,7 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
      返回 true 表示删除，否则不删除，Java 源代码中，该方法直接返回 false，如下图所示，看来是专门留给开发者扩展额。*/
     public LRUCache(int maxCacheSize) {
 
-        // 第三个参数为 accessOrder，默认为false。表示按照按照访问顺序排列元素，最近访问的元素会排雷在队末尾
+        // 第三个参数为 accessOrder，默认为false。表示按照按照访问顺序排列元素，最近访问的元素会排在队末尾
         super(maxCacheSize, 0.75f, true);
 
         this.MAX_ENTRIES = maxCacheSize;

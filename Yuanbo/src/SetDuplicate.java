@@ -14,7 +14,7 @@ public class SetDuplicate {
 		
 		a.contains("3");
 		
-		a.removeAll(null);
+//		a.removeAll();
 		
 		
 		List<T> A = new ArrayList<T>();

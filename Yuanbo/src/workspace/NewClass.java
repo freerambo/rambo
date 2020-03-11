@@ -1,8 +1,5 @@
-package com.rambo.modules.practice;
+package workspace;
 
-
-import java.lang.*;
-import java.util.Properties;
 
 public class NewClass {
     public static void main(String[] args) {

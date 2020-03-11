@@ -93,9 +93,7 @@ public class ThreadTest {
 
     /**
      * https://blog.csdn.net/fuyuwei2015/article/details/83825851
-     * really appreciate if you can please help us to execute the script in SBX. Thanks in advance.
      *
-     * that are planned to be delivered by SG Team.
      */
 
     public static void method_04() {

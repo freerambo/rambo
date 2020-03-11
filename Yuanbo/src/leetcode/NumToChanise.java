@@ -43,6 +43,7 @@ public class NumToChanise {
         while(i<result.length() && result.charAt(i) == '零') i++;
         while(j > 0 && result.charAt(j) == '零') j--;
         result = result.substring(i, j+1);
+        result = result.replaceAll("零+", "零");
     	System.out.println(result);
        /* for(; i <result.length();i++){
         	if(i != result.length() - 1 && result.charAt(i) != '零')

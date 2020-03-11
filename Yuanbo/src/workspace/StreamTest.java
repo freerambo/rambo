@@ -1,7 +1,5 @@
 package workspace;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rambo.modules.mapper.JsonMapper;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,7 +29,7 @@ public class StreamTest {
 
         tranTypeBOList.add(typeBO1);
 
-        System.out.println(JsonMapper.nonDefaultMapper().toJson(tranTypeBOList));
+       /* System.out.println(JsonMapper.nonDefaultMapper().toJson(tranTypeBOList));
         String jsonString = "[{\"tranTyp\":\"OT\",\"tranCnt\":3,\"lastTranAmt\":15.99,\"lastTranAmtUSD\":15.99,\"lastTranTS\":\"28-AUG-18 01.55.01.00000000 PM\",\"lastCurrCd\":\"USD\"},{\"tranTyp\":\"RR\",\"tranCnt\":2,\"lastTranAmt\":16.99,\"lastTranAmtUSD\":16.99,\"lastTranTS\":\"02-FEB-19 12.07.26.00000000 AM\",\"lastCurrCd\":\"USD\"},{\"tranTyp\":\"BP\",\"tranCnt\":1,\"lastTranAmt\":16.99,\"lastTranAmtUSD\":16.99,\"lastTranTS\":\"28-FEB-19 03.43.04.00000000 PM\",\"lastCurrCd\":\"USD\"}]\n";
 
 
@@ -40,7 +38,7 @@ public class StreamTest {
         tranTypeBOList = objectMapper.readValue(
                 jsonString,
                 objectMapper.getTypeFactory().constructCollectionType(
-                        List.class, TranTypeBO.class));
+                        List.class, TranTypeBO.class));*/
 
 
         TranTypeBO latestTranTypeBO =
