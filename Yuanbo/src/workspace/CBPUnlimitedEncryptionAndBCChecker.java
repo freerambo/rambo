@@ -1,7 +1,7 @@
 package workspace;
 // Java Code:
 
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
+//import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 import javax.crypto.Cipher;
 import java.security.NoSuchAlgorithmException;
@@ -11,7 +11,7 @@ public class CBPUnlimitedEncryptionAndBCChecker {
       System.out.println("Java version = " + System.getProperty("java.version"));
       System.out.println("MAX key length = " + Cipher.getMaxAllowedKeyLength("AES")); // if > 128 => unlimited encryption
       System.out.println("Unlimited Encryption : " + (Cipher.getMaxAllowedKeyLength("AES") > 128 ? "Enabled" : "Disabled"));
-      System.out.println("Bouncy Castle info = " + new BouncyCastleProvider());
+//      System.out.println("Bouncy Castle info = " + new BouncyCastleProvider());
    }
    /**
     * Java version = 1.8.0_161

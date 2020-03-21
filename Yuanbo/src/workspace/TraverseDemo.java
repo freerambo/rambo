@@ -31,7 +31,7 @@ public class TraverseDemo {
         return l1;
     }
 
-    private static TreeNode getTreeNode() {
+    public static TreeNode getTreeNode() {
         TreeNode l1 = new TreeNode(1);
         TreeNode l2 = new TreeNode(2);
         TreeNode l3 = new TreeNode(3);
