@@ -1,4 +1,4 @@
-package workspace;
+package workspace.dp;
 
 import java.util.stream.Stream;
 
