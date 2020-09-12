@@ -17,8 +17,8 @@ public class Child implements Hitable {
 
 	@Override
 	public void beHit(BadBoy boy) {
-		System.out.println("child " + this.getName() + "±»" + boy.getName()
-				+ "´ò¿ÞÁË");
+		System.out.println("child " + this.getName() + "" + boy.getName()
+				+ "");
 	}
 
 }

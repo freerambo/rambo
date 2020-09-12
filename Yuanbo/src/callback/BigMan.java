@@ -16,8 +16,8 @@ public class BigMan implements Hitable {
 
 	@Override
 	public void beHit(BadBoy boy) {
-		System.out.println("bigman " + this.getName() + "∞—" + boy.getName()
-				+ "…±À¿¡À");
+		System.out.println("bigman " + this.getName() + "" + boy.getName()
+				+ "");
 	}
 
 }
